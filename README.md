@@ -11,18 +11,18 @@ They are small, model-agnostic, and composable. Adapt them, delete the ones you 
 | Skill | Fixes the recurring correction |
 |-------|-------------------------------|
 | [closing-the-loop](./skills/engineering/closing-the-loop/SKILL.md) | "it's done" / "server's running" when the command actually failed. Cite an observed result before claiming success. |
-| [scope-discipline](./skills/engineering/scope-discipline/SKILL.md) | "no need for all that" — extra features, migrations, and caps nobody asked for. |
-| [read-before-acting](./skills/engineering/read-before-acting/SKILL.md) | "just look at the code" — answering or editing from assumption instead of reading the real thing. |
-| [safe-reverts](./skills/engineering/safe-reverts/SKILL.md) | "why did u revert, now the other changes are gone" — destructive git ops that eat concurrent or uncommitted work. |
-| [grounding-with-context7](./skills/engineering/grounding-with-context7/SKILL.md) | "use context7 to help u" — reaching for a library from stale training data instead of grounding in current docs. |
+| [scope-discipline](./skills/engineering/scope-discipline/SKILL.md) | "no need for all that", extra features, migrations, and caps nobody asked for. |
+| [read-before-acting](./skills/engineering/read-before-acting/SKILL.md) | "just look at the code", answering or editing from assumption instead of reading the real thing. |
+| [safe-reverts](./skills/engineering/safe-reverts/SKILL.md) | "why did u revert, now the other changes are gone", destructive git ops that eat concurrent or uncommitted work. |
+| [grounding-with-context7](./skills/engineering/grounding-with-context7/SKILL.md) | "use context7 to help u", reaching for a library from stale training data instead of grounding in current docs. |
 | [learning-from-exemplar-repos](./skills/engineering/learning-from-exemplar-repos/SKILL.md) | inventing framework/style patterns from scratch instead of studying a repo that already does it well ("just apply determinism"). |
 
 ### Writing
 
 | Skill | Fixes the recurring correction |
 |-------|-------------------------------|
-| [grounded-product-copy](./skills/writing/grounded-product-copy/SKILL.md) | "we don't have a mobile app / testimonials" — copy that claims things the product doesn't do. |
-| [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | em dashes, jargon, all-caps eyebrows, cheap icons — the tells that read as AI-generated. |
+| [grounded-product-copy](./skills/writing/grounded-product-copy/SKILL.md) | "we don't have a mobile app / testimonials", copy that claims things the product doesn't do. |
+| [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | em dashes, jargon, all-caps eyebrows, cheap icons, the tells that read as AI-generated. |
 
 ### Design
 
