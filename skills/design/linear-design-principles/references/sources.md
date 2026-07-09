@@ -53,18 +53,18 @@ Used to test where Linear's principles generalize, where they break, and where t
 
 **Design canon / foundations**
 - Dieter Rams, "Ten principles for good design" (Vitsœ): https://www.vitsoe.com/us/about/good-design
-- Apple Human Interface Guidelines — Design principles: https://developer.apple.com/design/human-interface-guidelines/design-principles · the original Apple desktop principles (see-and-point, direct manipulation, forgiveness), summarized: https://modelessdesign.com/backdrop/204
+- Apple Human Interface Guidelines, Design principles: https://developer.apple.com/design/human-interface-guidelines/design-principles · the original Apple desktop principles (see-and-point, direct manipulation, forgiveness), summarized: https://modelessdesign.com/backdrop/204
 
 **Figma** (collaboration, quality ritual, design systems, taste)
 - Quality Week / Little Big Updates: https://www.figma.com/blog/little-big-updates-dispatches-from-quality-week/ · https://www.figma.com/blog/little-big-updates-2023/
 - The business case for design systems: https://www.figma.com/blog/the-new-business-case-for-design-systems/
 - Good design in the age of AI: https://www.figma.com/blog/what-is-good-design-in-the-age-of-ai/
-- Karri Saarinen's 10 rules (hosted by Figma — note: Linear's own CEO, treat as reinforcement not independent proof): https://www.figma.com/blog/karri-saarinens-10-rules-for-crafting-products-that-stand-out/
+- Karri Saarinen's 10 rules (hosted by Figma, note: Linear's own CEO, treat as reinforcement not independent proof): https://www.figma.com/blog/karri-saarinens-10-rules-for-crafting-products-that-stand-out/
 - "Nothing Great Is Made Alone" (Figma × COLLINS): https://wearecollins.com/case-studies/figma/
 
 **Stripe** (the API/CLI/docs as UI, contracts that only extend)
 - API versioning / account pinning: https://stripe.com/blog/api-versioning
-- Designing APIs for humans — error messages: https://dev.to/stripe/designing-apis-for-humans-error-messages-94p
+- Designing APIs for humans, error messages: https://dev.to/stripe/designing-apis-for-humans-error-messages-94p
 - Payment API design: https://stripe.dev/blog/payment-api-design
 
 **Superhuman** (speed, keyboard, PMF-by-survey, engineered delight)
@@ -89,13 +89,13 @@ Used to test where Linear's principles generalize, where they break, and where t
 - RICE prioritization: https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/ · product strategy means saying no: https://www.intercom.com/blog/product-strategy-means-saying-no/
 
 **Agent-era practice (cross-industry)**
-- Anthropic — Building effective agents: https://www.anthropic.com/research/building-effective-agents · Writing tools for agents: https://www.anthropic.com/engineering/writing-tools-for-agents · Effective context engineering: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
-- OpenAI — A practical guide to building agents: https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf · Operator (confirmation/takeover): https://openai.com/index/introducing-operator/
-- LangChain — agent observability powers evaluation: https://blog.langchain.com/agent-observability-powers-agent-evaluation/
-- Smashing Magazine — practical UX patterns for agentic AI: https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/
+- Anthropic, Building effective agents: https://www.anthropic.com/research/building-effective-agents · Writing tools for agents: https://www.anthropic.com/engineering/writing-tools-for-agents · Effective context engineering: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+- OpenAI, A practical guide to building agents: https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf · Operator (confirmation/takeover): https://openai.com/index/introducing-operator/
+- LangChain, agent observability powers evaluation: https://blog.langchain.com/agent-observability-powers-agent-evaluation/
+- Smashing Magazine, practical UX patterns for agentic AI: https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/
 
 **Airbnb / Cultured Code** (design systems, motion as artifact, native polish)
-- Airbnb DLS (led by Karri Saarinen pre-Linear — the precursor to the Linear model): https://karrisaarinen.com/posts/building-airbnb-design-system/ · https://medium.com/airbnb-design/building-a-visual-language-behind-the-scenes-of-our-airbnb-design-system-224748775e4e
+- Airbnb DLS (led by Karri Saarinen pre-Linear, the precursor to the Linear model): https://karrisaarinen.com/posts/building-airbnb-design-system/ · https://medium.com/airbnb-design/building-a-visual-language-behind-the-scenes-of-our-airbnb-design-system-224748775e4e
 - Lottie (motion that ships faithfully): https://medium.com/airbnb-engineering/introducing-lottie-4ff4a0afac0e
 - Cultured Code / Things (obsessive native craft): https://medium.com/@jordanborth/an-ode-to-cultured-code-and-things-3-292e20112624
 
@@ -106,18 +106,18 @@ Used to test where Linear's principles generalize, where they break, and where t
 - Much of the strongest material is **first-party** (Linear's own blog and founder talks): candid but self-promotional. Claims like "quality drives growth" are framed by Linear as causal but not independently audited.
 - The **2026 agent-era posts** (linear.app/next and the Diffs / Coding Sessions / bug-fix cluster) are product-launch announcements as much as essays. Adoption stats (75%+ of enterprise workspaces, 5x growth, ~25% agent-authored issues) are Linear's own and point-in-time; treat the underlying principles (context over handoffs, code-is-useful-not-just-correct, human accountability) as the durable part and the feature names/numbers as a snapshot.
 - **Sync-engine internals** (conflict resolution, CRDT vs. OT) are partly reverse-engineered by third parties; some specifics are inferred from talks. The "<50ms" page-load figure is third-party measurement, not an official benchmark.
-- The Figma "10 rules" article uses "differentiator," "people pay attention," "win a market" — not "compounding." Treat any compounding framing as interpretation.
+- The Figma "10 rules" article uses "differentiator," "people pay attention," "win a market", not "compounding." Treat any compounding framing as interpretation.
 - Critics note the opinionated model fits software product teams better than teams needing deep customization; the "Project" abstraction is contested. These are legitimate limitations, not universal truths.
 
 ### Peer-source caveats (from the fact-checking pass)
 The peer research blended real sources; a verification pass flagged these. When writing, cite the *practice* and link the *verified* page; prefer paraphrase over verbatim for any quote flagged here.
-- **Karri Saarinen "10 rules" on Figma's blog is Linear's own CEO** — reinforcement of Linear's philosophy by a bigger platform, *not* independent third-party proof. Use only for reach, not as corroboration.
+- **Karri Saarinen "10 rules" on Figma's blog is Linear's own CEO**: reinforcement of Linear's philosophy by a bigger platform, *not* independent third-party proof. Use only for reach, not as corroboration.
 - **The "ACI" (agent-computer interface) framing** is from Anthropic's *Building effective agents*, not *Writing tools for agents*. The concrete guidance (human-readable fields, namespacing, response-format control) is on the *tools* page. Cite each to the right URL.
-- **OpenAI agent-safety specifics** — watch mode, takeover, never-sees-passwords, pauses for logins/payments — are from Operator's *product* pages, not the "Practical Guide" PDF. The guardrail *layers* are from the PDF. Split the citation.
-- **Vercel quantified thresholds** — 24/44px hit targets, APCA-over-WCAG2, "never `transition: all`" live on the **Vercel Guidelines** page; press/dialog scale, 16px inputs, and focus-ring rules are from **raunofreiberg/interfaces**. Source each number to the right place.
-- **Rauno quotes** ("spend less time in Figma," etc.) are from interviews, not the blog/role pages — paraphrase rather than quote.
-- **Figma design-system ROI stats** (Grammarly ~25%, Freshworks 28%, SAP board OKR) are on the business-case page; the *technical* guidance ("never detach atom instances," token-level customization) is genuine Figma material from elsewhere — don't attribute both to one link.
-- **Intercom RICE** — the article says "a tangled mess of gut feeling," not "strip gut feelings out." Paraphrase. Intercom's four onboarding forces label the fourth "inertia," not "habit."
-- **The Browser Company** — "10x adoption" is an inference (40%/37% vs ~4–5%), not a stated figure; the "saxophone vs. piano" metaphor originated with Scott Forstall and was adopted by Josh Miller. Attribute accordingly.
-- **Airbnb cross-platform** — the claim that DLS makes iOS/Android look *pixel-identical* was **rejected**; sources say components *adapt* across platforms. Do not repeat any "looks exactly the same" framing.
+- **OpenAI agent-safety specifics**: watch mode, takeover, never-sees-passwords, pauses for logins/payments, are from Operator's *product* pages, not the "Practical Guide" PDF. The guardrail *layers* are from the PDF. Split the citation.
+- **Vercel quantified thresholds**: 24/44px hit targets, APCA-over-WCAG2, "never `transition: all`" live on the **Vercel Guidelines** page; press/dialog scale, 16px inputs, and focus-ring rules are from **raunofreiberg/interfaces**. Source each number to the right place.
+- **Rauno quotes** ("spend less time in Figma," etc.) are from interviews, not the blog/role pages, paraphrase rather than quote.
+- **Figma design-system ROI stats** (Grammarly ~25%, Freshworks 28%, SAP board OKR) are on the business-case page; the *technical* guidance ("never detach atom instances," token-level customization) is genuine Figma material from elsewhere, don't attribute both to one link.
+- **Intercom RICE**: the article says "a tangled mess of gut feeling," not "strip gut feelings out." Paraphrase. Intercom's four onboarding forces label the fourth "inertia," not "habit."
+- **The Browser Company**: "10x adoption" is an inference (40%/37% vs ~4–5%), not a stated figure; the "saxophone vs. piano" metaphor originated with Scott Forstall and was adopted by Josh Miller. Attribute accordingly.
+- **Airbnb cross-platform**: the claim that DLS makes iOS/Android look *pixel-identical* was **rejected**; sources say components *adapt* across platforms. Do not repeat any "looks exactly the same" framing.
 - Several Notion secondary URLs surfaced by the research were unverified; the substantive Notion claims (flexibility/templates as counterweight) rest on primary interviews. Treat single-source Notion specifics as medium-confidence.

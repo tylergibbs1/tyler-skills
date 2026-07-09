@@ -4,14 +4,14 @@ How to actually spawn subagents on each platform. Pick by scale (see SKILL.md).
 Every dispatch must carry the Context7 mandate from the briefing template.
 
 ## Contents
-- Claude Code — subagents (default for feature work)
-- Claude Code — dynamic workflows (large-scale fan-out)
-- Codex — subagents and custom agents
+- Claude Code, subagents (default for feature work)
+- Claude Code, dynamic workflows (large-scale fan-out)
+- Codex, subagents and custom agents
 - Choosing between them
 
 ---
 
-## Claude Code — subagents
+## Claude Code, subagents
 
 The default for implementation that splits into a handful of pieces. Claude
 orchestrates turn by turn and each result returns into the conversation.
@@ -25,7 +25,7 @@ orchestrates turn by turn and each result returns into the conversation.
 - Subagents run with their own context; their final message is the only thing you
   get back, so require a structured report-back in the brief.
 
-## Claude Code — dynamic workflows
+## Claude Code, dynamic workflows
 
 For large-scale or repeatable orchestration: codebase-wide audits, 100s-of-files
 migrations, research cross-checked across sources, or drafting one plan from
@@ -35,17 +35,17 @@ in script variables instead of your context.
 
 - Workflows require the user's opt-in. They start one with the `ultracode` keyword,
   by asking in words ("use a workflow" / "run a workflow"), or by setting
-  `/effort ultracode`. **Do not launch one without that opt-in** — instead, tell
+  `/effort ultracode`. **Do not launch one without that opt-in**: instead, tell
   the user the task is workflow-shaped and offer to write the script.
 - The script still has to embed each agent's brief and the Context7 mandate in the
-  prompts it generates — the same self-contained-brief rule applies per agent.
+  prompts it generates, the same self-contained-brief rule applies per agent.
 - Build in a quality pass where it helps: have independent agents adversarially
   review each other's output before results are accepted.
 - Once a run does what you want, it can be saved as a `/command` under
   `.claude/workflows/` (project) or `~/.claude/workflows/` (personal) and rerun
   with `args`.
 
-## Codex — subagents
+## Codex, subagents
 
 Codex spawns subagents **only when you explicitly ask it to**. Built-in agents:
 `default` (general), `worker` (implementation/fixes), `explorer` (read-heavy
@@ -84,7 +84,7 @@ url = "https://mcp.context7.com/mcp"
 ```
 
 > Confirm the project's actual Context7 MCP configuration (transport/URL or local
-> command) before relying on the snippet above — match what's already set up.
+> command) before relying on the snippet above, match what's already set up.
 
 ## Choosing between them
 
@@ -96,4 +96,4 @@ url = "https://mcp.context7.com/mcp"
 | One row per item, identical task | Codex `spawn_agents_on_csv` |
 | Reusable, opinionated worker roles you'll run repeatedly | Codex custom agents in `.codex/agents/` |
 
-When unsure, default to subagents — lighter, and you stay in the loop to integrate.
+When unsure, default to subagents, lighter, and you stay in the loop to integrate.

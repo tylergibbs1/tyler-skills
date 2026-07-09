@@ -1,7 +1,7 @@
 # Shipping PR Reviews
 
 A skill you call to **push the current changes to a PR, then run a dynamic workflow
-that reviews the diff, verifies findings, and fixes the real ones** — pushing the
+that reviews the diff, verifies findings, and fixes the real ones**: pushing the
 fixes back to the same PR.
 
 It's the review-and-ship counterpart to
@@ -10,14 +10,14 @@ implements a feature with parallel subagents; this one ships and reviews the res
 
 ## What it does
 
-1. **Pre-flight** — confirms a clean git state and green build/tests.
-2. **Ship** — branches (if needed), commits, pushes, and opens the PR with `gh`;
+1. **Pre-flight**: confirms a clean git state and green build/tests.
+2. **Ship**: branches (if needed), commits, pushes, and opens the PR with `gh`;
    surfaces the PR URL.
-3. **Review-and-fix workflow** — a dynamic workflow reviews the PR diff across
+3. **Review-and-fix workflow**: a dynamic workflow reviews the PR diff across
    dimensions (correctness, security, error handling, tests, performance),
    adversarially verifies each finding so false positives are dropped, and fixes the
    confirmed ones in isolated worktrees. Fix agents pull fresh docs via Context7.
-4. **Push fixes + report** — applies fixes to the branch, re-runs build/tests,
+4. **Push fixes + report**: applies fixes to the branch, re-runs build/tests,
    pushes, and reports confirmed / fixed / skipped / unverified.
 
 ## How to invoke
@@ -31,7 +31,7 @@ For a lighter local pass without a custom workflow, the built-in `/code-review`
 ## Install
 
 This skill follows the [Agent Skills](https://agentskills.io/) format. Once it's
-pushed to a repo, install it with the `skills` CLI — the same way
+pushed to a repo, install it with the `skills` CLI, the same way
 [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) installs:
 
 ```bash

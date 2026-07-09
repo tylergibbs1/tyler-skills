@@ -23,7 +23,7 @@ git rev-parse --abbrev-ref HEAD # current branch
 
 ## Branch, commit, push
 
-If you're on the default branch, branch first — never commit the work directly to
+If you're on the default branch, branch first, never commit the work directly to
 the default branch:
 
 ```bash

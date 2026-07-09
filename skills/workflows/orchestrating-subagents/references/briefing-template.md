@@ -1,6 +1,6 @@
 # Subagent Briefing Template
 
-Fill this out for each subagent. It must be **self-contained** — the subagent
+Fill this out for each subagent. It must be **self-contained**: the subagent
 does not see the orchestrator's conversation, so every fact it needs goes here.
 
 ## Contents
@@ -33,11 +33,11 @@ FILES YOU OWN (create/edit only these)
 SHARED CONTRACT (do not change; other agents depend on it)
 <types / API shape / schema / function signatures the orchestrator froze>
 
-FRESH DOCS — REQUIRED
+FRESH DOCS, REQUIRED
 Before writing any code that touches an external library, framework, SDK, or
 API, call mcp__context7__resolve-library-id then mcp__context7__query-docs to
 fetch current docs for the exact version used in this project. Cite the version
-in a code comment. Do not rely on memorized APIs — they may be outdated.
+in a code comment. Do not rely on memorized APIs, they may be outdated.
 
 ACCEPTANCE
 - <what "done" looks like: behavior, tests passing, etc.>
@@ -62,7 +62,7 @@ GOAL
 Add a POST /api/invoices route that validates input and persists an invoice.
 
 CONTEXT
-- Project: ./ — Next.js 15 App Router, TypeScript, pnpm
+- Project: ./, Next.js 15 App Router, TypeScript, pnpm
 - Build/test: `pnpm build`, `pnpm test`, `pnpm lint`
 - Conventions: Zod for validation, route handlers in app/api/*/route.ts,
   return NextResponse.json, throw via the shared `ApiError` helper
@@ -76,7 +76,7 @@ type Invoice = { id: string; amountCents: number; customerId: string;
   status: 'draft' | 'sent' }
 The DB layer exposes `db.invoices.create(data: Omit<Invoice,'id'>): Promise<Invoice>`
 
-FRESH DOCS — REQUIRED
+FRESH DOCS, REQUIRED
 Before using Zod or Next.js route-handler APIs, resolve them via
 mcp__context7__resolve-library-id and pull current docs with
 mcp__context7__query-docs for the versions in package.json. Cite versions in a
@@ -94,7 +94,7 @@ REPORT BACK
 
 ## Notes on the Context7 mandate
 
-- Keep the mandate **in every brief**, not just the orchestrator's head — the
+- Keep the mandate **in every brief**, not just the orchestrator's head, the
   subagent only follows what's written in front of it.
 - Use the fully-qualified MCP tool names (`mcp__context7__resolve-library-id`,
   `mcp__context7__query-docs`) so the subagent can find the tools.

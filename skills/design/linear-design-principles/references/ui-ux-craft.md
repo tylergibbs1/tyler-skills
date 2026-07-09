@@ -36,7 +36,7 @@ The most directly useful UI article. The interface became crowded as features ac
 🔗 https://linear.app/now/a-design-reset
 🔗 https://linear.app/now/how-we-redesigned-the-linear-ui
 
-Fast-moving products accumulate **design debt** as new features strain old surfaces. Some debt is better paid down in larger holistic sweeps than per-screen fixes ("no software design is truly timeless"). The redesign focused on accommodating product evolution, clarity, and navigation — but they cut navigation changes from scope due to behavioral and engineering risk.
+Fast-moving products accumulate **design debt** as new features strain old surfaces. Some debt is better paid down in larger holistic sweeps than per-screen fixes ("no software design is truly timeless"). The redesign focused on accommodating product evolution, clarity, and navigation, but they cut navigation changes from scope due to behavioral and engineering risk.
 
 - Redesigns should start from product evolution, not visual taste.
 - Keep the user's mental model stable unless changing it is truly necessary.
@@ -81,7 +81,7 @@ Traditional interfaces give predictable paths; AI introduces variance. Generic c
 **Best for:** design QA, polish rituals
 🔗 https://linear.app/now/quality-wednesdays
 
-A weekly ritual where engineers find and fix small quality defects (origin: an offsite where engineers couldn't spot that a hover animation darkened instantly instead of fading over ~150ms). Key lesson: quality is trained. People get better at noticing inconsistent animations, misalignments, and papercuts by repeatedly inspecting the product together — and then ship fewer papercuts in the first place.
+A weekly ritual where engineers find and fix small quality defects (origin: an offsite where engineers couldn't spot that a hover animation darkened instantly instead of fading over ~150ms). Key lesson: quality is trained. People get better at noticing inconsistent animations, misalignments, and papercuts by repeatedly inspecting the product together, and then ship fewer papercuts in the first place.
 
 - Quality is not just the designer's job.
 - Review UI as a group; different people notice different defects.
@@ -91,7 +91,7 @@ A weekly ritual where engineers find and fix small quality defects (origin: an o
 **Best for:** product taste, quality as strategy
 🔗 https://linear.app/now/why-is-quality-so-rare
 
-Adapted from Karri Saarinen's Config 2025 keynote. Modern software optimizes for speed, metrics, and process at the expense of craft; technology cycles push toward speed and cheapness and craft gets forgotten. Craft = deliberate attention put into making something excellent because it matters to the maker. "Quality creates gravity — it pulls people in rather than requiring us to push."
+Adapted from Karri Saarinen's Config 2025 keynote. Modern software optimizes for speed, metrics, and process at the expense of craft; technology cycles push toward speed and cheapness and craft gets forgotten. Craft = deliberate attention put into making something excellent because it matters to the maker. "Quality creates gravity, it pulls people in rather than requiring us to push."
 
 - Quality as a north star; quality compounds through many small decisions.
 - Trust intuition and customers over pure data.
@@ -112,7 +112,7 @@ Settings aren't automatically a sign of poor design. Some details are taste, hab
 **Best for:** UX research interpretation, feedback synthesis
 🔗 https://linear.app/now/building-what-customers-need
 
-Users describe symptoms or request familiar solutions; teams must infer the deeper need. Example: many users asked for "custom fields," but ~40% really wanted to track customer needs — leading to a purpose-built Customer Requests workflow instead of a generic field.
+Users describe symptoms or request familiar solutions; teams must infer the deeper need. Example: many users asked for "custom fields," but ~40% really wanted to track customer needs, leading to a purpose-built Customer Requests workflow instead of a generic field.
 
 - Treat user requests as input, not instructions.
 - Don't tally feature requests blindly.
@@ -122,7 +122,7 @@ Users describe symptoms or request familiar solutions; teams must infer the deep
 **Best for:** data UX, dashboards, information architecture
 🔗 https://linear.app/now/dashboards-best-practices
 
-- Every dashboard needs a clear purpose and owner. (Median workspace makes ~2 dashboards; adoption drops fast beyond that — when teams spin up dozens, most go stale and stop being trusted.)
+- Every dashboard needs a clear purpose and owner. (Median workspace makes ~2 dashboards; adoption drops fast beyond that, when teams spin up dozens, most go stale and stop being trusted.)
 - Strategy dashboards: a handful of stable long-term trends for alignment. Operational dashboards: change, exceptions, action triggers.
 - Executive dashboards need more explanation; team dashboards can be denser.
 - A metric without comparison, history, or threshold is often useless (pair raw numbers with context like burn-up charts).
@@ -131,7 +131,7 @@ Users describe symptoms or request familiar solutions; teams must infer the deep
 **Best for:** product strategy in the agent era, context over handoffs
 🔗 https://linear.app/next (Mar 24, 2026)
 
-Linear's public reframing of its own thesis. The argument: issue trackers were built for **handoffs** (a PM scopes work, an engineer executes later) — overhead that made sense when engineering time was scarce. As agents absorb procedural work, the bottleneck moves to **context**, so the system's job is to turn captured context into execution: "Linear is the shared product system that turns context into execution." Stated adoption: coding agents in **75%+ of enterprise workspaces**, agent-completed work up **5x in three months**, agents authoring **~25% of new issues**.
+Linear's public reframing of its own thesis. The argument: issue trackers were built for **handoffs** (a PM scopes work, an engineer executes later): overhead that made sense when engineering time was scarce. As agents absorb procedural work, the bottleneck moves to **context**, so the system's job is to turn captured context into execution: "Linear is the shared product system that turns context into execution." Stated adoption: coding agents in **75%+ of enterprise workspaces**, agent-completed work up **5x in three months**, agents authoring **~25% of new issues**.
 
 - The next system is designed around **context and agents**, not handoffs.
 - Capture customer feedback, internal ideas, strategic direction, decisions, and code in one place both humans and agents can use.
@@ -139,13 +139,13 @@ Linear's public reframing of its own thesis. The argument: issue trackers were b
 
 ## 12. Code review in the agent era (Diffs)
 **Best for:** AI/agent review surfaces, human accountability
-🔗 https://linear.app/now/reviewing-code-in-the-agent-era (Jun 10, 2026) · also https://linear.app/now/code-review-should-be-fast (May 28, 2026) and the review half of https://linear.app/now/coding-sessions-for-linear-agent — these describe the same **Diffs** feature; read as one.
+🔗 https://linear.app/now/reviewing-code-in-the-agent-era (Jun 10, 2026) · also https://linear.app/now/code-review-should-be-fast (May 28, 2026) and the review half of https://linear.app/now/coding-sessions-for-linear-agent, these describe the same **Diffs** feature; read as one.
 
 When agents generate large volumes of code, review can't stay line-by-line syntax checking. Linear's stance: "quality code review has come to mean that the code is **useful**, not just correct." Diffs embeds review inside Linear next to the product context, and structures changes "into chunks that read like a story" (narrative diffs) so reviewers follow logic instead of drowning in volume.
 
 - The reviewer's job elevates from code parser to **product thinker**: edge cases, UX implications, whether the change matters to users.
 - Agents handle correctness/bug-finding; humans stay the gate on usefulness and intent.
-- Keep review discussion among people — it reinforces engineering culture and accountability.
+- Keep review discussion among people, it reinforces engineering culture and accountability.
 
 ## 13. Teaching agents to do the work (2026)
 **Best for:** agentic workflow design, gradual autonomy, accountability
@@ -155,9 +155,9 @@ How Linear ships its own agent capabilities: Code Intelligence (the agent reads 
 
 - Embed agents where work lives (triage, the issue) and let work **auto-start** from existing signals.
 - Make agent runs **observable and shared**; gate autonomy on confidence, not all-or-nothing.
-- The issue stays assigned to a person — "an agent cannot be held accountable."
+- The issue stays assigned to a person, "an agent cannot be held accountable."
 
-> **Sourcing note:** these 2026 posts are product-launch announcements as much as craft essays — candid but promotional, and partly aspirational about adoption. Treat the principles as durable; treat specific feature names and stats as point-in-time.
+> **Sourcing note:** these 2026 posts are product-launch announcements as much as craft essays, candid but promotional, and partly aspirational about adoption. Treat the principles as durable; treat specific feature names and stats as point-in-time.
 
 ---
 
@@ -177,13 +177,13 @@ How Linear ships its own agent capabilities: Code Intelligence (the agent reads 
 
 ## Beyond Linear: two craft topics Linear under-documents
 
-Everything above is Linear's own writing. Two craft areas the Linear posts barely touch — worth reading from peers:
+Everything above is Linear's own writing. Two craft areas the Linear posts barely touch, worth reading from peers:
 
 ### Motion as a communication channel (not only something to suppress)
-Linear's single animation lesson is "make the hover fade invisible over ~150ms" — restraint, i.e. how *not* to animate. That's half the story. Airbnb and Cultured Code treat motion as a designed, owned *artifact* that **communicates**: state changes, spatial continuity, and where something came from or went. Airbnb built and open-sourced **Lottie** so designers' After Effects motion ships pixel-faithfully into production rather than being re-approximated in code; Things uses physics-y "flocking" motion when dragging multiple items so the interaction reads as physical.
+Linear's single animation lesson is "make the hover fade invisible over ~150ms", restraint, i.e. how *not* to animate. That's half the story. Airbnb and Cultured Code treat motion as a designed, owned *artifact* that **communicates**: state changes, spatial continuity, and where something came from or went. Airbnb built and open-sourced **Lottie** so designers' After Effects motion ships pixel-faithfully into production rather than being re-approximated in code; Things uses physics-y "flocking" motion when dragging multiple items so the interaction reads as physical.
 - The test for a flourish: does it *communicate* (mark a real state change or spatial relationship) or merely decorate? On a high-frequency work surface, most motion should be invisible (Linear's instinct); at milestones and on consumer/personal apps, expressive motion earns its place. See `boundaries-and-peers.md`, #8.
 - 🔗 https://medium.com/airbnb-engineering/introducing-lottie-4ff4a0afac0e · https://medium.com/@jordanborth/an-ode-to-cultured-code-and-things-3-292e20112624
 
 ### Context engineering: the model's context window as a finite resource
-Linear's agent-era posts use "context" to mean *organizational* context (decisions, the "why," code in one place — SKILL.md principle 11). When you actually build an agent feature, there's a second, literal meaning: the LLM's **context window**, which has diminishing returns and "context rot." Anthropic's guidance: retrieve just-in-time instead of front-loading everything, compact the history as you approach the limit, and isolate sub-agents so they hand back distilled summaries rather than raw transcripts. Pairs with the agent-computer-interface and evals points in SKILL.md principle 8.
+Linear's agent-era posts use "context" to mean *organizational* context (decisions, the "why," code in one place, SKILL.md principle 11). When you actually build an agent feature, there's a second, literal meaning: the LLM's **context window**, which has diminishing returns and "context rot." Anthropic's guidance: retrieve just-in-time instead of front-loading everything, compact the history as you approach the limit, and isolate sub-agents so they hand back distilled summaries rather than raw transcripts. Pairs with the agent-computer-interface and evals points in SKILL.md principle 8.
 - 🔗 https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents · https://www.anthropic.com/engineering/writing-tools-for-agents

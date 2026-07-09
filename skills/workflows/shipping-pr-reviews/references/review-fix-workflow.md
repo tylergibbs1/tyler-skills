@@ -105,7 +105,7 @@ const reviewed = await pipeline(
     parallel([0, 1].map((i) => () =>
       agent(
         `Adversarially verify this PR-review finding. Try to REFUTE it; default to ` +
-        `real=false if uncertain.\nFile ${f.file}:${f.line} — ${f.summary}\n` +
+        `real=false if uncertain.\nFile ${f.file}:${f.line}, ${f.summary}\n` +
         `Inspect the actual code (\`${diffCmd}\` and read the file) before deciding.`,
         { label: `verify:${f.file}:${f.line}#${i}`, phase: 'Verify', schema: VERDICT_SCHEMA }
       )
@@ -128,7 +128,7 @@ log(`${confirmed.length} confirmed, ${unverified.length} unverified, ` +
 const fixes = await parallel(confirmed.map((f) => () =>
   agent(
     `Fix this confirmed PR-review finding with the smallest correct change.\n` +
-    `File ${f.file}:${f.line} — ${f.summary}\nSuggested: ${f.suggested_fix || 'n/a'}\n` +
+    `File ${f.file}:${f.line}, ${f.summary}\nSuggested: ${f.suggested_fix || 'n/a'}\n` +
     `Edit only ${f.file} (and its test) unless the fix demands otherwise.\n` +
     `BEFORE writing code that touches any external library, framework, SDK, or API, ` +
     `call mcp__context7__resolve-library-id then mcp__context7__query-docs for the ` +
@@ -148,14 +148,14 @@ return {
 ## Why it's shaped this way
 
 - **Pipeline, not barrier:** each dimension's findings start verifying the moment
-  that dimension finishes reviewing — no waiting for the slowest reviewer.
+  that dimension finishes reviewing, no waiting for the slowest reviewer.
 - **Adversarial verify:** independent skeptics prompted to *refute* drop
   plausible-but-wrong findings, so the fix phase only touches real bugs.
 - **Unverified ≠ refuted:** a finding whose verifiers errored out is reported as
   unverified rather than silently dropped or fixed.
 - **One file, one fix agent**, run in a worktree (`isolation: 'worktree'`) so
   parallel fixes don't collide.
-- **Context7 mandate** lives inside each fix agent's prompt — the agent only follows
+- **Context7 mandate** lives inside each fix agent's prompt, the agent only follows
   what's written in front of it.
 
 ## Scaling and cost notes
@@ -163,7 +163,7 @@ return {
 - A workflow caps at ~16 concurrent agents and 1,000 total per run; it counts toward
   plan usage. Trim `DIMENSIONS` and vote counts for a quick pass; expand for a
   thorough audit.
-- The script does not edit files itself — the fix agents do, in worktrees. After the
+- The script does not edit files itself, the fix agents do, in worktrees. After the
   run returns, reconcile the worktree changes into your branch, re-run build/tests,
   and push (see pr-push.md).
 - Drop the `Fix` phase entirely if the user only wants a review report; return
