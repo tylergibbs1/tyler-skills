@@ -1,0 +1,51 @@
+{
+  "skill_name": "human-sounding-copy",
+  "evals": [
+    {
+      "skills": [
+        "human-sounding-copy"
+      ],
+      "query": "Write the feature announcement for our new dashboard.",
+      "files": [],
+      "expected_behavior": [
+        "Uses no em dashes anywhere",
+        "Avoids jargon, all-caps eyebrows/overlines, and inflated-significance words (seamless, robust, leverage, pivotal)",
+        "Reads as plain, specific, benefit-led human writing",
+        "Does NOT use title-case headings, bold-term-colon list items, or an appended Conclusion section"
+      ]
+    },
+    {
+      "skills": [
+        "human-sounding-copy"
+      ],
+      "query": "Polish this paragraph: 'Our platform \u2014 built for speed \u2014 delivers seamless, robust workflows.'",
+      "files": [],
+      "expected_behavior": [
+        "Removes the em dashes and rewrites into clean sentences",
+        "Strips the AI-tell adjectives (seamless, robust) in favor of concrete, specific language",
+        "Keeps the meaning while making it sound human"
+      ]
+    },
+    {
+      "skills": [
+        "human-sounding-copy"
+      ],
+      "query": "Draft the on-screen text for our product video.",
+      "files": [],
+      "expected_behavior": [
+        "Writes concise on-screen copy with no emojis (they read as cheap in video)",
+        "Avoids em dashes and jargon",
+        "Uses minimal, meaningful wording rather than decorative flourish"
+      ]
+    },
+    {
+      "skills": [],
+      "query": "Generate a package.json with the standard scripts block.",
+      "files": [],
+      "expected_behavior": [
+        "Produces the JSON config",
+        "Does NOT apply prose style rules, since this is machine config, not human-facing writing"
+      ]
+    }
+  ]
+}

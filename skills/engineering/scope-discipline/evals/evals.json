@@ -1,0 +1,52 @@
+{
+  "skill_name": "scope-discipline",
+  "evals": [
+    {
+      "skills": [
+        "scope-discipline"
+      ],
+      "query": "Add an endpoint so we can send the welcome email.",
+      "files": [],
+      "expected_behavior": [
+        "Implements just the send-email endpoint that was asked for",
+        "Does NOT add unrequested extras like a retry queue, rate limiting, an admin UI, or a template management system",
+        "If it thinks an extra is worth doing, names it in one line and lets the user decide rather than building it",
+        "Keeps the change minimal and focused"
+      ]
+    },
+    {
+      "skills": [
+        "scope-discipline"
+      ],
+      "query": "We have no users yet. Just get the new posts table working.",
+      "files": [],
+      "expected_behavior": [
+        "Adds the table and the minimal wiring to make it work",
+        "Does NOT write data migrations, backward-compatibility shims, or versioning, since there are no users to preserve",
+        "Assumes greenfield unless told otherwise",
+        "Does NOT productionize or harden beyond the ask"
+      ]
+    },
+    {
+      "skills": [
+        "scope-discipline"
+      ],
+      "query": "Wire up the AI SDK call so it returns a completion.",
+      "files": [],
+      "expected_behavior": [
+        "Gets the single call working",
+        "Does NOT add speculative token caps, tool-call limits, elaborate error-handling layers, or config toggles that were not requested",
+        "Does NOT open a PR or set up preview environments unless asked"
+      ]
+    },
+    {
+      "skills": [],
+      "query": "Build this as a production service: retries with backoff, a migration, input validation, and an admin dashboard.",
+      "files": [],
+      "expected_behavior": [
+        "Builds all the requested pieces, since retries, the migration, validation, and the dashboard were explicitly asked for",
+        "Does NOT suppress or trim requested work in the name of minimalism, the scope was set by the user"
+      ]
+    }
+  ]
+}

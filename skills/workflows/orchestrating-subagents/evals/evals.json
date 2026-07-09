@@ -1,0 +1,40 @@
+{
+  "skill_name": "orchestrating-subagents",
+  "evals": [
+    {
+      "skills": [
+        "orchestrating-subagents"
+      ],
+      "query": "Use subagents to implement these four independent features in parallel.",
+      "files": [],
+      "expected_behavior": [
+        "Acts as orchestrator: decomposes the work and fans out one subagent per independent piece",
+        "Gives each subagent a self-contained brief with the context it needs and the exact libraries/versions involved",
+        "Instructs each subagent to pull fresh docs via Context7",
+        "Verifies each subagent's output rather than assuming success, and reports failures plainly",
+        "Does NOT write all the implementation itself in one linear pass"
+      ]
+    },
+    {
+      "skills": [
+        "orchestrating-subagents"
+      ],
+      "query": "Parallelize this large refactor across many files.",
+      "files": [],
+      "expected_behavior": [
+        "Splits the refactor into independent workstreams and dispatches subagents",
+        "Uses worktree isolation when agents mutate files in parallel to avoid conflicts",
+        "Keeps the orchestrator in the loop, collecting and verifying results"
+      ]
+    },
+    {
+      "skills": [],
+      "query": "Rename this one variable from foo to bar in this file.",
+      "files": [],
+      "expected_behavior": [
+        "Makes the trivial edit directly",
+        "Does NOT spin up subagents, the orchestration overhead is not worth it for a tiny change"
+      ]
+    }
+  ]
+}

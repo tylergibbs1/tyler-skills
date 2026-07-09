@@ -1,0 +1,50 @@
+{
+  "skill_name": "grounding-with-context7",
+  "evals": [
+    {
+      "skills": [
+        "grounding-with-context7"
+      ],
+      "query": "Add Resend so we can send the emails.",
+      "files": [],
+      "expected_behavior": [
+        "Uses Context7 (resolve-library-id then query-docs) to pull current Resend docs before implementing",
+        "Follows the fetched docs and cites the version rather than writing the integration from memory",
+        "Does NOT rely on possibly-stale training data for the API"
+      ]
+    },
+    {
+      "skills": [
+        "grounding-with-context7"
+      ],
+      "query": "Are we fully leveraging vitest, or are there features we're missing?",
+      "files": [],
+      "expected_behavior": [
+        "Uses Context7 to look up current vitest docs and audits the project's usage against them",
+        "Surfaces specific features the project is not yet using",
+        "Treats this as a full-leverage audit, not just a syntax lookup"
+      ]
+    },
+    {
+      "skills": [
+        "grounding-with-context7"
+      ],
+      "query": "Double-check that our AI SDK streaming setup is correct.",
+      "files": [],
+      "expected_behavior": [
+        "Grounds the review by fetching the AI SDK docs via Context7 and comparing the existing usage against them",
+        "Confirms or corrects the usage based on the docs, citing the version",
+        "Does NOT verify correctness from memory alone"
+      ]
+    },
+    {
+      "skills": [],
+      "query": "Our totals are off by one because a loop uses <= instead of <. Fix it.",
+      "files": [],
+      "expected_behavior": [
+        "Fixes the off-by-one logic bug directly",
+        "Does NOT reach for Context7, since no library, framework, or SDK behavior is in question"
+      ]
+    }
+  ]
+}

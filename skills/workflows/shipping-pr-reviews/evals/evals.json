@@ -1,0 +1,39 @@
+{
+  "skill_name": "shipping-pr-reviews",
+  "evals": [
+    {
+      "skills": [
+        "shipping-pr-reviews"
+      ],
+      "query": "Push these changes to a PR and run a review over it.",
+      "files": [],
+      "expected_behavior": [
+        "Confirms before the first push, since pushing and opening a PR are outward-facing",
+        "Pushes the changes and opens the PR, then launches the review workflow over the PR diff",
+        "Adversarially verifies each finding before acting on it",
+        "Fixes the confirmed findings and pushes the fixes back to the PR, calling out anything left unverified"
+      ]
+    },
+    {
+      "skills": [
+        "shipping-pr-reviews"
+      ],
+      "query": "Open a PR for this branch, then review and fix the findings.",
+      "files": [],
+      "expected_behavior": [
+        "Runs the full flow: push to PR, review the diff, verify findings, fix the confirmed ones",
+        "Reports which findings were confirmed and fixed versus dismissed or unverified",
+        "Does NOT apply unverified findings blindly"
+      ]
+    },
+    {
+      "skills": [],
+      "query": "Just commit this locally. Do not push anything yet.",
+      "files": [],
+      "expected_behavior": [
+        "Commits locally only",
+        "Does NOT push to a remote or open a PR, respecting the explicit instruction not to push"
+      ]
+    }
+  ]
+}
