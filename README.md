@@ -15,6 +15,7 @@ They are small, model-agnostic, and composable. Adapt them, delete the ones you 
 | [read-before-acting](./skills/engineering/read-before-acting/SKILL.md) | "just look at the code" — answering or editing from assumption instead of reading the real thing. |
 | [safe-reverts](./skills/engineering/safe-reverts/SKILL.md) | "why did u revert, now the other changes are gone" — destructive git ops that eat concurrent or uncommitted work. |
 | [grounding-with-context7](./skills/engineering/grounding-with-context7/SKILL.md) | "use context7 to help u" — reaching for a library from stale training data instead of grounding in current docs. |
+| [learning-from-exemplar-repos](./skills/engineering/learning-from-exemplar-repos/SKILL.md) | inventing framework/style patterns from scratch instead of studying a repo that already does it well ("just apply determinism"). |
 
 ### Writing
 

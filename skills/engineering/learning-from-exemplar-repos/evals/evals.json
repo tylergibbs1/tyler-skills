@@ -1,0 +1,48 @@
+{
+  "skill_name": "learning-from-exemplar-repos",
+  "evals": [
+    {
+      "skills": ["learning-from-exemplar-repos"],
+      "query": "Scaffold the data-loading and routing for a new page in our TanStack Start app.",
+      "files": [],
+      "expected_behavior": [
+        "Studies a real exemplar before writing: the existing app's own route files if there is an internal precedent, or an external TanStack Start repo (for example tanstack.com) if there is not",
+        "Reads how routes, loaders, and server-function boundaries are laid out and mirrors those patterns",
+        "Adapts the patterns to the local codebase's existing conventions rather than copying wholesale",
+        "Pairs the reference with current docs (Context7) for version-specific API details",
+        "Does NOT scaffold from memory/guesswork about how TanStack Start should be structured"
+      ]
+    },
+    {
+      "skills": ["learning-from-exemplar-repos"],
+      "query": "I want our dashboard to feel like OpenPanel. Build the analytics overview page.",
+      "files": [],
+      "expected_behavior": [
+        "Treats OpenPanel as the exemplar and studies its dashboard layout, component composition, and SSR patterns first",
+        "Approximates the referenced style while fitting the local design system and conventions",
+        "Does NOT copy OpenPanel wholesale or import its code without adapting",
+        "Confirms the reference before leaning on it if the match is ambiguous"
+      ]
+    },
+    {
+      "skills": ["learning-from-exemplar-repos"],
+      "query": "Add proper Effect-TS service and layer composition for the new billing module.",
+      "files": [],
+      "expected_behavior": [
+        "Points to an Effect-TS exemplar (for example opencode) for idiomatic service/layer composition and error channels",
+        "Studies the exemplar's structure before writing, rather than approximating Effect idioms from memory",
+        "Sanity-checks the exemplar's patterns against current Effect APIs via Context7, since Effect moves fast",
+        "Adapts to the local codebase's conventions"
+      ]
+    },
+    {
+      "skills": [],
+      "query": "Rename this local variable and fix the typo in the comment above it.",
+      "files": [],
+      "expected_behavior": [
+        "Makes the trivial edit directly",
+        "Does NOT go looking for an exemplar repo, since there is no framework pattern or style to ground in"
+      ]
+    }
+  ]
+}
