@@ -29,6 +29,16 @@ They are small, model-agnostic, and composable. Adapt them, delete the ones you 
 | Skill | What it does |
 |-------|--------------|
 | [linear-design-principles](./skills/design/linear-design-principles/SKILL.md) | Apply Linear's UI/UX and product philosophy as product judgment, not decoration. Peer-aware about where those opinions have limits. |
+| [mirroring-layout-in-loading-states](./skills/design/mirroring-layout-in-loading-states/SKILL.md) | loading states that don't match the real layout (perceived shift) and progress UI that lies ("still showing this even though its done"). |
+
+### Product
+
+Mined from the full-history workflow pass. Deciding what to build and in what order.
+
+| Skill | What it does |
+|-------|--------------|
+| [proving-value-before-building-out](./skills/product/proving-value-before-building-out/SKILL.md) | Validate the core value headless, with an eval harness on real inputs, before any UI or infra. |
+| [researching-latent-demand](./skills/product/researching-latent-demand/SKILL.md) | Decide what to build from real pain/market research and the painkiller-not-vitamin test, then file as issues. |
 
 ### Workflows
 

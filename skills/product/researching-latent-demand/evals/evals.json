@@ -1,0 +1,47 @@
+{
+  "skill_name": "researching-latent-demand",
+  "evals": [
+    {
+      "skills": ["researching-latent-demand"],
+      "query": "What features should we build next for rebar to give it some wow factor?",
+      "files": [],
+      "expected_behavior": [
+        "Does real pain/market research (HN, Reddit, GitHub issues, pricing complaints, competitor gaps) before proposing features",
+        "Reasons from the validated problem rather than starting from an imagined feature",
+        "Applies the painkiller-not-vitamin test with a skeptical default",
+        "Files the prioritized findings as tracked GitHub issues rather than leaving a chat list",
+        "Does NOT answer from generic product intuition alone"
+      ]
+    },
+    {
+      "skills": ["researching-latent-demand"],
+      "query": "Do a competitive gap analysis for our product and tell me where the latent demand is.",
+      "files": [],
+      "expected_behavior": [
+        "Maps what competitors do and do not do, and locates the gap where demand sits",
+        "Grounds claims in real evidence (reviews, complaints, community discussion), not assumption",
+        "Reasons from the underlying problem and applies the painkiller test",
+        "Offers to record the prioritized opportunities as issues"
+      ]
+    },
+    {
+      "skills": ["researching-latent-demand"],
+      "query": "Should we build a Slack integration or a mobile app first?",
+      "files": [],
+      "expected_behavior": [
+        "Researches which underlying pain is more acute and better validated before recommending",
+        "Frames the decision around problem evidence and the painkiller-not-vitamin test, not a guess",
+        "Does NOT just pick one from intuition without grounding it in demand evidence"
+      ]
+    },
+    {
+      "skills": [],
+      "query": "Implement the dark-mode toggle we already spec'd and agreed on.",
+      "files": [],
+      "expected_behavior": [
+        "Implements the already-decided feature",
+        "Does NOT re-open ideation or run latent-demand research on a settled, spec'd task"
+      ]
+    }
+  ]
+}

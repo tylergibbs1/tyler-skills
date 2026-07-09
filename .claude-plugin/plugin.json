@@ -10,6 +10,9 @@
     "./skills/writing/grounded-product-copy",
     "./skills/writing/human-sounding-copy",
     "./skills/design/linear-design-principles",
+    "./skills/design/mirroring-layout-in-loading-states",
+    "./skills/product/proving-value-before-building-out",
+    "./skills/product/researching-latent-demand",
     "./skills/workflows/orchestrating-subagents",
     "./skills/workflows/shipping-pr-reviews"
   ]

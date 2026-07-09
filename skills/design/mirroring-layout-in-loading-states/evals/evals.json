@@ -1,0 +1,46 @@
+{
+  "skill_name": "mirroring-layout-in-loading-states",
+  "evals": [
+    {
+      "skills": ["mirroring-layout-in-loading-states"],
+      "query": "Add a loading.tsx for the prior-auth detail page under the dashboard.",
+      "files": [],
+      "expected_behavior": [
+        "Looks at the prior-auth page's own real content and builds a skeleton that mirrors that route's layout and dimensions",
+        "Does NOT reuse the parent dashboard's skeleton for a child route",
+        "Matches the real container type (grid vs flex) so there is no perceived layout shift",
+        "Adds appropriate aria attributes to the loading region"
+      ]
+    },
+    {
+      "skills": ["mirroring-layout-in-loading-states"],
+      "query": "The import banner still says 'Importing...' even though the sync finished. Fix it.",
+      "files": [],
+      "expected_behavior": [
+        "Ties the banner state to the actual job status so it does not show a stale/running state after completion",
+        "Ensures terminal states (done, error, empty) are honest and not premature",
+        "Does NOT just hide the banner on a timer or flash 'done' before work is actually finished"
+      ]
+    },
+    {
+      "skills": ["mirroring-layout-in-loading-states"],
+      "query": "Review our loading states across the app before I ship to prod.",
+      "files": [],
+      "expected_behavior": [
+        "Checks each route's loading.tsx against that route's real component, not a shared default",
+        "Flags skeletons whose structure or sizing differs from the real content (layout shift)",
+        "Flags any progress UI that could show stale or premature 'done' state",
+        "Checks accessibility of loading regions"
+      ]
+    },
+    {
+      "skills": [],
+      "query": "Rename the CSS class on this button from .btn-primary to .btn-cta.",
+      "files": [],
+      "expected_behavior": [
+        "Makes the rename directly",
+        "Does NOT pull in loading-state fidelity concerns, since no loading or skeleton UI is involved"
+      ]
+    }
+  ]
+}
