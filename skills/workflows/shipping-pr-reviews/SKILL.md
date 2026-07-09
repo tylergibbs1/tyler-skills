@@ -3,7 +3,7 @@ name: shipping-pr-reviews
 description: >-
   Push the current changes to a pull request, then launch a dynamic workflow that
   reviews the PR diff, adversarially verifies each finding, and fixes the confirmed
-  ones — pushing the fixes back to the PR. Use when the user wants to "push to a PR
+  ones, pushing the fixes back to the PR. Use when the user wants to "push to a PR
   and review", "open a PR then review and fix findings", "ship and review", or run
   a multi-agent review-and-fix pass over a branch. Pairs with orchestrating-subagents
   (which implements the change first).
@@ -26,7 +26,7 @@ shows before it runs.
 Use after a change is implemented and the build/tests pass, when the user wants it
 on a PR with a multi-agent review-and-fix pass. For a quick local review without a
 PR or custom script, the built-in `/code-review` (add `--fix` to apply findings,
-`ultra` for a deeper cloud review) is lighter — mention it if that's all they need.
+`ultra` for a deeper cloud review) is lighter, mention it if that's all they need.
 
 ## Workflow
 
@@ -44,11 +44,11 @@ Ship + Review Progress:
 - Confirm you're in a git repo and the build/tests/linters pass. Don't ship broken
   code for review.
 - Check `git status` and the current branch. Note the base branch (usually the
-  default branch) — the review compares the PR diff against it.
+  default branch), the review compares the PR diff against it.
 
 ### 2. Push to a PR
 
-Pushing and opening a PR are outward-facing — confirm before the first push unless
+Pushing and opening a PR are outward-facing, confirm before the first push unless
 the user already told you to ship. Steps and exact commands are in
 [references/pr-push.md](references/pr-push.md):
 
@@ -63,8 +63,8 @@ Write and run a dynamic workflow over the PR diff. Adapt the ready-made script i
 [references/review-fix-workflow.md](references/review-fix-workflow.md). It:
 
 - **Reviews** the diff across independent dimensions (correctness, security, error
-  handling, tests, performance) — one agent per dimension, in parallel.
-- **Verifies** each finding adversarially — independent skeptics try to refute it;
+  handling, tests, performance), one agent per dimension, in parallel.
+- **Verifies** each finding adversarially, independent skeptics try to refute it;
   findings that don't survive are dropped, so you fix real bugs, not noise.
 - **Fixes** each confirmed finding in its own agent. Fix agents that touch an
   external library MUST pull current docs via Context7
@@ -84,7 +84,7 @@ build/tests, then commit and push to the same PR branch.
 
 Post a summary (and/or PR comment) listing: findings confirmed, fixes applied,
 findings skipped as false positives, and any finding that couldn't be verified
-(e.g. an agent hit an error) — call those out as unverified rather than fixed.
+(e.g. an agent hit an error), call those out as unverified rather than fixed.
 
 ## Key rules
 

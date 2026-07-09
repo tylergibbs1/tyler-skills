@@ -1,5 +1,13 @@
 # Sources
 
+## Contents
+- Primary (Linear)
+- Interviews and profiles
+- Technical (speed / sync engine)
+- Background
+- Peer companies (for `boundaries-and-peers.md` and corroboration)
+- Sourcing caveats
+
 ## Primary (Linear)
 - Linear Now (blog): https://linear.app/now
 - Linear Method: https://linear.app/method

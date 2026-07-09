@@ -16,7 +16,7 @@ metadata:
 
 # Orchestrating Subagents
 
-You are the **orchestrator**. You do not write the implementation yourself — you
+You are the **orchestrator**. You do not write the implementation yourself, you
 decompose the work, dispatch subagents to implement each piece, give each one
 enough context to succeed without your conversation, and require each to verify
 APIs against fresh docs via Context7 before writing code. Then you integrate and
@@ -26,7 +26,7 @@ verify the combined result.
 
 Use for tasks that split into independent, parallelizable workstreams (e.g. "build
 the API, the UI, and the migration"). For a single linear change, just do it
-directly — orchestration overhead isn't worth it.
+directly, orchestration overhead isn't worth it.
 
 ## Pick the dispatch mechanism first
 
@@ -44,7 +44,7 @@ Match the mechanism to the scale. Details and exact commands are in
   needs their opt-in, e.g. `ultracode` or "use a workflow"); don't silently launch
   one.
 
-When unsure, default to subagents — they're lighter and keep you in the loop.
+When unsure, default to subagents, they're lighter and keep you in the loop.
 
 ## Workflow
 
@@ -64,7 +64,7 @@ Orchestration Progress:
 Gather what the subagents will need but can't cheaply rediscover, since they don't
 share your context:
 - Project layout, build/test/lint commands, and conventions to match.
-- The exact libraries/frameworks/**versions** involved — subagents must use these,
+- The exact libraries/frameworks/**versions** involved, subagents must use these,
   not whatever they'd default to.
 - Shared contracts (types, API shapes, schemas) that subtasks depend on. **Define
   these yourself** so parallel agents agree on the interface between their pieces.
@@ -81,7 +81,7 @@ feed its result into B's brief.
 
 ### 3. Brief and dispatch
 
-Every subagent gets a **self-contained** brief — it does not see this conversation.
+Every subagent gets a **self-contained** brief, it does not see this conversation.
 Use the template in [references/briefing-template.md](references/briefing-template.md).
 Every brief MUST carry the Context7 mandate so subagents code against current APIs,
 not stale training data:
@@ -91,7 +91,7 @@ not stale training data:
 > to fetch current docs for the exact version in this project. Cite the confirmed
 > version in a code comment. Do not rely on memorized APIs.
 
-Dispatch using the mechanism you picked above — see
+Dispatch using the mechanism you picked above, see
 [references/dispatch.md](references/dispatch.md) for Claude Code subagents, Claude
 Code workflows, and Codex (including a custom `.codex/agents` agent wired to docs).
 
@@ -99,19 +99,19 @@ Code workflows, and Codex (including a custom `.codex/agents` agent wired to doc
 
 When subagents return, check for: overlapping edits, mismatched contracts, missing
 pieces, and anything that skipped the Context7 step. Fix small gaps yourself or
-dispatch a tightly-scoped follow-up. Never assume a subagent succeeded — verify its
+dispatch a tightly-scoped follow-up. Never assume a subagent succeeded, verify its
 claims.
 
 ### 5. Integrate and verify
 
 Wire the pieces together, then run the project's build/tests/linters. If something
 fails, fix it or send a scoped subagent with the error output. Report what each
-subagent produced and the final verification result plainly — including failures.
+subagent produced and the final verification result plainly, including failures.
 
 ## Shipping and reviewing
 
 To push the result to a PR and run a review-and-fix workflow over it, that's a
-separate skill — `shipping-pr-reviews`. Hand off to it once the build/tests pass.
+separate skill, `shipping-pr-reviews`. Hand off to it once the build/tests pass.
 
 ## Key rules
 
