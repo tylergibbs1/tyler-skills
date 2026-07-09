@@ -7,6 +7,9 @@
     "./skills/engineering/safe-reverts",
     "./skills/engineering/grounding-with-context7",
     "./skills/writing/grounded-product-copy",
-    "./skills/writing/human-sounding-copy"
+    "./skills/writing/human-sounding-copy",
+    "./skills/design/linear-design-principles",
+    "./skills/workflows/orchestrating-subagents",
+    "./skills/workflows/shipping-pr-reviews"
   ]
 }

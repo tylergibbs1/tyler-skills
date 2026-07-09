@@ -23,6 +23,21 @@ They are small, model-agnostic, and composable. Adapt them, delete the ones you 
 | [grounded-product-copy](./skills/writing/grounded-product-copy/SKILL.md) | "we don't have a mobile app / testimonials" — copy that claims things the product doesn't do. |
 | [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | em dashes, jargon, all-caps eyebrows, cheap icons — the tells that read as AI-generated. |
 
+### Design
+
+| Skill | What it does |
+|-------|--------------|
+| [linear-design-principles](./skills/design/linear-design-principles/SKILL.md) | Apply Linear's UI/UX and product philosophy as product judgment, not decoration. Peer-aware about where those opinions have limits. |
+
+### Workflows
+
+User-invoked multi-agent orchestration (reach them by name).
+
+| Skill | What it does |
+|-------|--------------|
+| [orchestrating-subagents](./skills/workflows/orchestrating-subagents/SKILL.md) | Decompose a task and fan out subagents to implement each piece in parallel, each briefed and told to ground in Context7. |
+| [shipping-pr-reviews](./skills/workflows/shipping-pr-reviews/SKILL.md) | Push changes to a PR, then run a workflow that reviews the diff, verifies each finding, and fixes the confirmed ones. |
+
 ## Install
 
 With [skills.sh](https://skills.sh):
