@@ -30,6 +30,7 @@ They are small, model-agnostic, and composable. Adapt them, delete the ones you 
 |-------|--------------|
 | [linear-design-principles](./skills/design/linear-design-principles/SKILL.md) | Apply Linear's UI/UX and product philosophy as product judgment, not decoration. Peer-aware about where those opinions have limits. |
 | [mirroring-layout-in-loading-states](./skills/design/mirroring-layout-in-loading-states/SKILL.md) | loading states that don't match the real layout (perceived shift) and progress UI that lies ("still showing this even though its done"). |
+| [creating-aws-architecture-diagrams](./skills/design/creating-aws-architecture-diagrams/SKILL.md) | Create precise AWS architecture diagrams with verified relationships, named resources, focused perspectives, and polished 16:9 output. |
 
 ### Product
 

@@ -1,0 +1,53 @@
+{
+  "skill_name": "creating-aws-architecture-diagrams",
+  "evals": [
+    {
+      "skills": ["creating-aws-architecture-diagrams"],
+      "query": "Create a 4K AWS PNG for a generic serverless web application: a browser loads static assets through CloudFront from S3 and calls API Gateway, which invokes Lambda to read and write DynamoDB.",
+      "files": [],
+      "expected_behavior": [
+        "Defines a current-runtime perspective before rendering",
+        "Creates an explicit resource inventory, containment map, and relationship allowlist",
+        "Shows separate asset-delivery and API request paths without merging them ambiguously",
+        "Labels each resource by descriptive name and AWS service type",
+        "Does not fabricate VPC or subnet boundaries for the managed services",
+        "Inspects the generated image against every allowed and forbidden edge",
+        "Saves and verifies an exact 3840x2160 PNG"
+      ]
+    },
+    {
+      "skills": ["creating-aws-architecture-diagrams"],
+      "query": "Update our AWS architecture picture to show a current synchronous API Gateway to Lambda request path and a proposed asynchronous API Gateway to SQS to Lambda worker path. Put everything in one diagram.",
+      "files": [],
+      "expected_behavior": [
+        "Rejects mixing current and future topology into an ambiguous master diagram",
+        "Creates separate current-runtime and proposed-asynchronous perspectives",
+        "Keeps the request path in each perspective limited to the services explicitly stated",
+        "Labels queue, worker, retry, and DLQ relationships explicitly in the scale-out view",
+        "Uses the documented SQS event source mapping relationship for Lambda workers",
+        "Uses the same visual system across both artifacts"
+      ]
+    },
+    {
+      "skills": ["creating-aws-architecture-diagrams"],
+      "query": "Generate an implementation-facing AWS architecture diagram from this repository's Terraform. Make it polished and use AWS icons.",
+      "files": [],
+      "expected_behavior": [
+        "Reads Terraform and relevant documentation before deciding the topology",
+        "Uses actual logical resource roles and does not expose secrets or copy sensitive account identifiers",
+        "Separates runtime dependencies from deployment-time resources when both exist",
+        "Uses current official AWS documentation to verify unstable service behavior",
+        "Rejects any generated image whose arrows or boundaries disagree with Terraform",
+        "Keeps a reviewable contract or Mermaid source beside the PNG"
+      ]
+    },
+    {
+      "skills": [],
+      "query": "Draw a UML class diagram for these local Python data models.",
+      "files": [],
+      "expected_behavior": [
+        "Does not invoke the AWS architecture diagram skill for a non-AWS UML class diagram"
+      ]
+    }
+  ]
+}
