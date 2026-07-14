@@ -1,13 +1,9 @@
 {
   "name": "tyler-skills",
   "skills": [
-    "./skills/engineering/closing-the-loop",
-    "./skills/engineering/scope-discipline",
-    "./skills/engineering/read-before-acting",
     "./skills/engineering/safe-reverts",
     "./skills/engineering/grounding-with-context7",
     "./skills/engineering/learning-from-exemplar-repos",
-    "./skills/writing/grounded-product-copy",
     "./skills/writing/human-sounding-copy",
     "./skills/design/linear-design-principles",
     "./skills/design/mirroring-layout-in-loading-states",

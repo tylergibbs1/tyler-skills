@@ -1,11 +1,11 @@
 ---
 name: proving-value-before-building-out
-description: Sequence new product or feature work as a headless "prove" phase that validates the core value on real inputs before any UI, microservices, or scaling. Use at the start of a new product/feature, or once a core engine exists and the user is about to add UI or infra. Distinct from scope-discipline: this is positive sequencing (prove the core first), not "don't gold-plate".
+description: Sequence new product or feature work as a headless "prove" phase that validates the core value on real inputs before any UI, microservices, or scaling. Use at the start of a new product or feature, or once a core engine exists and the user is about to add UI or infrastructure.
 ---
 
 # Proving Value Before Building Out
 
-Before building UI, infrastructure, or scale, prove the core value proposition works. This developer explicitly asks for this sequencing ("first i want to set a prove phase to see if the core value prop actually works... no ui or microservices yet"). It is not the same as scope-discipline: scope-discipline says do not over-build a given task; this says get the hard part right and validated before building outward.
+Before building UI, infrastructure, or scale, prove the core value proposition works. Get the hard part right and validated before building outward.
 
 ## The sequence
 
