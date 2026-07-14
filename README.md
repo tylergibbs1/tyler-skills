@@ -1,6 +1,6 @@
 # Skills
 
-Agent skills mined from my own Claude Code history. I parsed ~4,600 sessions, pulled every moment where I had to correct the model, and clustered the recurring mistakes. Each skill below is a fix for one of those recurring corrections, so the same one stops happening.
+Agent skills I find useful for my workflow.
 
 They are small, model-agnostic, and composable. Adapt them, delete the ones you disagree with, make them yours.
 
@@ -8,16 +8,15 @@ They are small, model-agnostic, and composable. Adapt them, delete the ones you 
 
 ### Engineering
 
-| Skill | Fixes the recurring correction |
-|-------|-------------------------------|
-| [safe-reverts](./skills/engineering/safe-reverts/SKILL.md) | "why did u revert, now the other changes are gone", destructive git ops that eat concurrent or uncommitted work. |
+| Skill | What it does |
+|-------|--------------|
 | [grounding-with-context7](./skills/engineering/grounding-with-context7/SKILL.md) | "use context7 to help u", reaching for a library from stale training data instead of grounding in current docs. |
 | [learning-from-exemplar-repos](./skills/engineering/learning-from-exemplar-repos/SKILL.md) | inventing framework/style patterns from scratch instead of studying a repo that already does it well ("just apply determinism"). |
 
 ### Writing
 
-| Skill | Fixes the recurring correction |
-|-------|-------------------------------|
+| Skill | What it does |
+|-------|--------------|
 | [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | em dashes, jargon, all-caps eyebrows, cheap icons, the tells that read as AI-generated. |
 
 ### Design
@@ -30,7 +29,7 @@ They are small, model-agnostic, and composable. Adapt them, delete the ones you 
 
 ### Product
 
-Mined from the full-history workflow pass. Deciding what to build and in what order.
+Skills for deciding what to build and in what order.
 
 | Skill | What it does |
 |-------|--------------|
@@ -64,9 +63,9 @@ cd tyler-skills
 
 Or add as a Claude Code plugin (the repo ships a `.claude-plugin/plugin.json`).
 
-## How these were built
+## Why these skills
 
-Each skill traces to a real, repeated correction, not a guess. The method: extract every human message that pushes back on the model (negation, "read the code first", frustration, "revert", explicit prohibitions), pair it with the assistant action that triggered it, then cluster. The clusters that showed up across many projects became these skills.
+These are practical patterns I find useful in my day-to-day workflow. Each skill captures a focused behavior that can be reused across projects and adapted as needed.
 
 ## License
 

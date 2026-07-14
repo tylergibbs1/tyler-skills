@@ -5,7 +5,7 @@ description: Strip the tells that make copy read as AI-generated or look cheap. 
 
 # Human-Sounding Copy
 
-A stable set of tells that make writing read as AI-generated or look cheap, gathered from repeated corrections. Remove them before shipping.
+A stable set of tells that make writing read as AI-generated or look cheap. Remove them before shipping.
 
 ## Never use
 
