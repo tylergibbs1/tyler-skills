@@ -1,7 +1,6 @@
 {
   "name": "tyler-skills",
   "skills": [
-    "./skills/engineering/safe-reverts",
     "./skills/engineering/grounding-with-context7",
     "./skills/engineering/learning-from-exemplar-repos",
     "./skills/writing/human-sounding-copy",
