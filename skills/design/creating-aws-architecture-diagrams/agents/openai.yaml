@@ -1,0 +1,4 @@
+interface:
+  display_name: "AWS Architecture Diagrams"
+  short_description: "Create precise, polished AWS architecture diagrams"
+  default_prompt: "Use $creating-aws-architecture-diagrams to create and verify an AWS architecture diagram for this system."
