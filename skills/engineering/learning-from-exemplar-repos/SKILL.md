@@ -1,6 +1,6 @@
 ---
 name: learning-from-exemplar-repos
-description: Ground implementation work in a high-quality reference repo instead of inventing patterns from scratch. Use when starting work in a framework (TanStack Start, Effect-TS, Next.js) or going for a specific design/style, when the user says "look at how X does it", "use Y as a reference", "match this repo's patterns", or when about to scaffold a feature in an unfamiliar stack. Pairs with grounding-with-context7: docs tell you the API, an exemplar repo shows you how good code actually composes it.
+description: Ground implementation work in a high-quality reference repo instead of inventing patterns from scratch. Use when starting work in a framework (TanStack Start, Effect-TS, Next.js) or going for a specific design/style, when the user says "look at how X does it", "use Y as a reference", "match this repo's patterns", or when about to scaffold a feature in an unfamiliar stack. Pairs with grounding-with-context7, where docs tell you the API and an exemplar repo shows you how good code actually composes it.
 ---
 
 # Learning From Exemplar Repos
