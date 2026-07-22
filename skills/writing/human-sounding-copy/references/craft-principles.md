@@ -16,6 +16,10 @@ AI text is usually locally grammatical and globally disconnected. Each sentence 
 
 **Subject and verb early.** Start most sentences with the subject and verb rather than a stack of introductory clauses. Clark: "begin sentences with subjects and verbs."
 
+**Characters as subjects, actions as verbs.** Williams's central diagnostic. Find the main action of the sentence. If it is sitting in a noun ("made a decision," "the deployment of," "there is a need for"), move it into the verb and make whoever performs it the grammatical subject. Nominalized prose reads as agentless and administrative because nobody in it is doing anything.
+
+This is also the one habit model editing runs backwards: an editing pass adds nominalizations and nonfinite clauses where a human editor holds flat. See `evidence.md`. Of everything in this file it is the most worth a second look on your own output.
+
 **Applying it:** read consecutive sentence openings in a paragraph. If they do not pick up anything from the previous sentence's ending, the paragraph has no cohesion regardless of how clean the sentences are.
 
 ---
@@ -42,7 +46,7 @@ AI text is usually locally grammatical and globally disconnected. Each sentence 
 
 **Endings.** Zinsser prefers a surprising ending, often a quotation, to a summarizing one. Never land a piece by recapping it.
 
-**Applying it:** every paragraph that makes a claim gets a named entity, a number, a date, or a specific situation. No exceptions in a piece of any length.
+**Applying it:** every paragraph that makes a claim gets a named entity, a number, a date, or a specific situation, and none of them may be invented. Get it from the writer or a source. If there is none to be had, cut the claim rather than supplying one. The quota is a reason to go find out, never permission to make it up.
 
 ---
 

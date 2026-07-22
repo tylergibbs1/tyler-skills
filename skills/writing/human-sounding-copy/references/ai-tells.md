@@ -11,14 +11,29 @@ Grouped by level. The higher up this file, the more durable the tell: word lists
 These survive every round of scrubbing because they come from how the model generates, not from what it was trained to prefer.
 
 - **Uniformity.** Uniform sentence length, uniform paragraph length, uniform grammatical construction, uniform section shape. Stylometric work (StyloMetrix/LightGBM, arXiv:2507.00838) finds LLM text measurably "more grammatically uniform." Uniformity itself is the deeper tell.
-- **Low burstiness.** Burstiness is the standard deviation of sentence lengths divided by the mean. Humans swing; models regress to a mean. Fix by drill: no three consecutive sentences within 3 words of each other, and every long passage gets at least one sentence under 8 words and one over 25.
-- **Low perplexity.** Each next word is the predictable one. You cannot fix this by swapping synonyms; you fix it by having something specific to say that the generic sentence could not have predicted.
-- **Genericness.** No named entities, no dates, no numbers, no real situations, no cultural or temporal anchor. LLMs default to the timeless and the universal.
-- **Assertion without engagement.** Claims are made, never defended against a real objection. No naysayer, no "so what," no consequence the writer would be accountable for.
+- **Low burstiness.** Burstiness is the standard deviation of sentence lengths divided by the mean. Humans swing; models regress to a mean, and since the 2025 generation that mean runs long. Fix by drill: no three consecutive sentences within 3 words of each other, and at least one sentence in five under 15 words.
+- **Low perplexity, and flat surprisal.** Each next word is the predictable one. The subtler half is the distribution: human text is heavy-tailed, flat ordinary stretches punctuated by genuinely unguessable words, while model text sits mid-range everywhere. So clustering the surprising material beats spreading it evenly. You cannot fix either by swapping synonyms.
+- **Genericness.** No named entities, no dates, no numbers, no real situations, no cultural or temporal anchor. LLMs default to the timeless and the universal. Time and place adverbials ("last Tuesday," "by then," "upstairs") go missing hardest of all.
+- **Assertion without argument.** Claims are made, never defended against a real objection. No naysayer, no "so what," no consequence the writer would be accountable for.
+- **Compulsive closure.** Every tension released, every example followed by a sentence explaining what it demonstrated, nothing left open. Of eight narratological dimensions compared between human and LLM stories, closure was the one that diverged.
 - **Symmetry for its own sake.** Forced parallelism, tricolons where the third item is filler, "not only X but also Y," balanced clauses that balance nothing.
-- **Low lexical diversity.** Measured as standardized type-token ratio (STTR) or MTLD, LLM text is repeatedly found less diverse than human text (arXiv:2308.09067; ACM CODS-COMAD 2025). Practical version: the same three abstract nouns recur across every paragraph.
+- **Lexical diversity cuts both ways, and the direction has flipped.** Older measurements (STTR/MTLD; arXiv:2308.09067, ACM CODS-COMAD 2025) found LLM text less diverse than human text across a whole document: the same three abstract nouns carrying every paragraph. Newer models run the other way, and against a single target author they always did. What the extra diversity buys is elegant variation, the fault Fowler named in 1906: one referent renamed down a thesaurus across a passage, the study becoming the research becoming the paper becoming the investigation. Both readings point at one fix. Keep the same name for the same thing, and get variety by having more than three ideas. See `evidence.md`.
 
-## 2. Formatting and layout tells
+## 2. Syntactic tells (durable, invisible to word lists)
+
+Measured on Biber's feature set against matched human corpora (Reinhart et al., PNAS 2025, arXiv:2410.16107). Rates are GPT-4o against the matched human rate. Base Llama 3 models sit near human rates on all of these, so this layer is what instruction tuning added rather than a property of fluent English. The authors: "instruction tuning appears to make the model output less human, not more."
+
+| Feature | GPT-4o vs human | Base models |
+|---|---|---|
+| Present participial clauses | roughly 5x | at human rate |
+| That-clauses as subject | roughly 2.5x | at human rate |
+| Nominalizations | roughly 2x | at human rate |
+| Phrasal coordination | roughly 2x | at human rate |
+| Agentless passive | roughly 0.5x | at human rate |
+
+The last row inverts the folk rule. Models underuse the passive, so "convert to active voice" is not a de-AI edit; that one has already been done to the text. Phrasal coordination is pass 1's doubled adjectives one layer down in the grammar, so fix it there. Ranking within the set shifts with the metric, and published summaries disagree on exact effect sizes, so treat direction and rough magnitude as the finding, not the order or the decimals.
+
+## 3. Formatting and layout tells
 
 Largely catalogued by Wikipedia's WikiProject AI Cleanup, "Signs of AI writing" (created August 2025), the most empirically grounded practitioner catalog, built from thousands of real edits and explicitly descriptive rather than prescriptive.
 
@@ -31,15 +46,17 @@ Largely catalogued by Wikipedia's WikiProject AI Cleanup, "Signs of AI writing" 
 - **Heading-level quirk.** A tendency to skip level-2 headings and start sections at level 3.
 - **Emoji in headers and list markers.**
 
-## 3. Punctuation tells
+## 4. Punctuation tells
 
-- **Em dash density.** The most discussed and the least reliable in isolation. Per arXiv:2603.27006 ("The Last Fingerprint: How Markdown Training Shapes LLM Prose," experiments Feb to Mar 2026), GPT-4.1 emits 10.62 em dashes per 1,000 words unconstrained and 9.10 under suppression, and still retains 3.86 even when the em dash is explicitly named in the instruction. Claude Opus drops from 9.09 to 0.19 under suppression. Meta's Llama models produce zero across roughly 40,000 words. The human baseline in that study, eight published essays totaling 57,232 words, sits near 3 per 1,000. Treat above 5 or 6 per 1,000 as worth review. This project's house rule is zero, which sidesteps the question.
+- **Em dash density.** The most discussed and the least reliable in isolation. GPT-4.1 runs near 10 per 1,000 words, the human baseline near 3, and Llama models emit zero. Full figures and caveats in `evidence.md`. This project's house rule is zero, which sidesteps the question.
 - **Curly vs straight quotes.** ChatGPT and DeepSeek tend to emit curly quotation marks and apostrophes, sometimes inconsistently within a single response; Gemini and Claude often do not. Mixed styles inside one document is the machine artifact. Normalize to one.
-- **Function words and POS ratios.** Forensic stylometry (Koppel et al.) classifies authorship on function-word distribution, part-of-speech ratios, and punctuation counts, all invisible to word-banning. Worth knowing exists; not something to hand-edit.
+- **Function words and POS ratios.** Forensic stylometry (Koppel et al.) classifies authorship on function-word distribution, part-of-speech ratios, and punctuation counts, all invisible to word-banning. Worth knowing exists. Most of it is not hand-editable, but the specific constructions in section 2 are.
 
-## 4. Lexical tells (least durable, refresh often)
+## 5. Lexical tells (least durable, refresh often)
 
 These decline as they become notorious. "Delve" has already dropped. Any fixed list ages, so learn the mechanism: the overuse traces partly to RLHF preference data (Juzek and Ward, arXiv:2412.11385, identified 21 focal words and tied overuse to RLHF), and partly to next-token optimization favoring high-probability phrasing.
+
+**Copula avoidance** (rising, and currently the most useful item in this section). Models replace "X is Y" with "X serves as Y," and likewise "stands as," "functions as," "represents," "marks," "emerges as," "remains." Wikipedia's AI Cleanup catalog covers it under avoidance of basic copulatives, citing a drop of over 10% in "is" and "are" in 2023 academic writing; Geng and Trotta (arXiv:2502.09606) find that decline still continuing in arXiv abstracts while "delve" and "intricate" fall away. Worked example from that catalog: "Gallery 825 is LAAA's exhibition arm" became "Gallery 825 serves as LAAA's exhibition space." This is the one entry here where the fix is a straight swap. Write "is."
 
 **Inflated significance** (the durable core of the category): underscores, highlights, showcases, pivotal, crucial, vital, testament to, stands as, plays a key role in, serves as, marks a turning point.
 
@@ -55,17 +72,18 @@ These decline as they become notorious. "Delve" has already dropped. Any fixed l
 
 **Fix rule:** none of these is fixed by a synonym. Replace an inflated-significance word with the actual consequence, or delete the claim.
 
-## 5. Rhetorical tells
+## 6. Rhetorical tells
 
 - **Negation-then-correction.** "It's not just X, it's Y." "This isn't about X. It's about Y." Enormously overused.
 - **The hollow pivot.** "But here's the thing." "The reality is more nuanced."
 - **Bilateral both-sidesing** that names two positions and endorses neither, then closes on "the truth lies somewhere in between."
 - **Performed vulnerability.** Manufactured admission ("I'll be honest, I struggled with this at first") with no actual consequence attached.
 - **Restating the question** before answering it.
-- **Rhetorical questions used as section openers.** "So what does this mean for your team?"
+- **Unanswered rhetorical questions as section openers.** "So what does this mean for your team?" The tell is the question the text never returns to, not the question itself.
+- **Borrowed authority.** A claim attributed to an unnamed plural: "experts," "observers," "industry reports," "many have argued." Wikipedia's AI Cleanup catalog covers this under vague attributions and overgeneralization of opinions, recording models exaggerating the number of sources and presenting one or two views as widely held. This is confidence inflation rather than hedging, which is why an anti-hedging pass leaves it untouched.
 
 ---
 
 ## Maintaining this file
 
-The lexical section (4) should be re-checked against current research rather than trusted from memory; words move on and off it. Sections 1 through 3 have been stable. If a future model ships with varied burstiness and no formatting tells by default, sections 1 through 3 shrink and voice and stakes become the entire job.
+The lexical section (5) should be re-checked against current research rather than trusted from memory; words move on and off it. Sections 1 through 4 have been stable. If a future model ships with varied burstiness and no formatting tells by default, those sections shrink and voice, structure, and stakes become the entire job.

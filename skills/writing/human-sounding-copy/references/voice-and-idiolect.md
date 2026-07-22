@@ -24,7 +24,11 @@ This is the strong case. Extract measurable habits, then match them. Do not para
 10. **Stance markers.** How they signal opinion: "I think," "obviously," "to be fair," or by flat assertion.
 11. **What they notice.** The kind of detail they include and the kind they skip.
 
-**Then match, with one hard rule: do not upgrade.** If the sample says "stuff," write "stuff." If it says "a bunch of," do not write "numerous." The instinct to improve someone's vocabulary is exactly what destroys the match, and it is the most common failure when a model is asked to write in someone's voice.
+**Then match, with two hard rules: do not upgrade, and do not de-duplicate.** If the sample says "stuff," write "stuff." If it says "a bunch of," do not write "numerous." If it says "thing" four times on a page, write "thing" four times. The instinct to improve someone's vocabulary is exactly what destroys the match, and reaching for a synonym on second mention is a reflex an editing model runs automatically.
+
+**Edit, do not rewrite.** Handing a whole passage to a model and asking for it back in someone's voice is the operation that destroys the voice. Across 2,700 rewrites of personal narratives, three frontier models moved every stylometric marker the same direction: contractions down about a third, first-person pronouns and function words down, lexical diversity and word length up, punctuation up sharply. Afterward a matcher could tie a rewrite back to its author only a few percent of the time. Adding "preserve the author's voice" to the prompt cut the drift by about a third without changing its direction. Content survives rewriting. Authorship does not. See `evidence.md`.
+
+So change the one sentence you actually object to and leave every other sentence byte-identical. Then diff. If the diff touched a contraction, a pronoun, a "just" or "really" or "kind of," or punctuation in a sentence you were not fixing, revert that hunk.
 
 **Do not copy content or claims from the sample.** Take the parameters, not the material.
 
