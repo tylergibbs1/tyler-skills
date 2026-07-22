@@ -17,7 +17,7 @@ They are small, model-agnostic, and composable. Adapt them, delete the ones you 
 
 | Skill | What it does |
 |-------|--------------|
-| [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | Make writing read as a specific human wrote it: cut AI verbosity, strip the lexical/punctuation/formatting tells, then rebuild with cohesion, rhythm, concreteness, stakes, and voice. |
+| [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | Writing that reads like a model wrote it: verbose, generic, em dashes, title-case headings, no stakes and no voice. Seven passes, plus exemplar writers to study and the research behind each tell. |
 
 ### Design
 
@@ -33,7 +33,6 @@ Skills for deciding what to build and in what order.
 
 | Skill | What it does |
 |-------|--------------|
-| [proving-value-before-building-out](./skills/product/proving-value-before-building-out/SKILL.md) | Validate the core value headless, with an eval harness on real inputs, before any UI or infra. |
 | [researching-latent-demand](./skills/product/researching-latent-demand/SKILL.md) | Decide what to build from real pain/market research and the painkiller-not-vitamin test, then file as issues. |
 
 ### Workflows
