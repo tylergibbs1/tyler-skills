@@ -10,7 +10,7 @@
       "expected_behavior": [
         "Uses no em dashes anywhere",
         "Avoids jargon, all-caps eyebrows/overlines, and inflated-significance words (seamless, robust, leverage, pivotal)",
-        "Reads as plain, specific, benefit-led human writing",
+        "Reads as plain, specific, benefit-led human writing with concrete detail rather than generic claims",
         "Does NOT use title-case headings, bold-term-colon list items, or an appended Conclusion section"
       ]
     },
@@ -18,11 +18,12 @@
       "skills": [
         "human-sounding-copy"
       ],
-      "query": "Polish this paragraph: 'Our platform \u2014 built for speed \u2014 delivers seamless, robust workflows.'",
+      "query": "Polish this paragraph: 'Our platform — built for speed — delivers seamless, robust workflows.'",
       "files": [],
       "expected_behavior": [
         "Removes the em dashes and rewrites into clean sentences",
         "Strips the AI-tell adjectives (seamless, robust) in favor of concrete, specific language",
+        "Replaces the inflated claim with an actual consequence rather than a synonym",
         "Keeps the meaning while making it sound human"
       ]
     },
@@ -30,12 +31,64 @@
       "skills": [
         "human-sounding-copy"
       ],
-      "query": "Draft the on-screen text for our product video.",
+      "query": "This blog post reads like ChatGPT wrote it. Make it sound human.",
       "files": [],
       "expected_behavior": [
-        "Writes concise on-screen copy with no emojis (they read as cheap in video)",
-        "Avoids em dashes and jargon",
-        "Uses minimal, meaningful wording rather than decorative flourish"
+        "Runs the cut pass first: removes throat-clearing openers, announcement sentences, summary closers, doubled adjectives, and hedge stacks",
+        "Fixes formatting tells: sentence-case headings, dissolves bold-term-colon lists, deletes any appended Conclusion or Challenges section",
+        "Rebuilds rather than only deleting: varies sentence length, adds concrete named detail, states real stakes",
+        "Does NOT add typos, random noise, or fake imperfections",
+        "Does NOT frame the goal as beating an AI detector"
+      ]
+    },
+    {
+      "skills": [
+        "human-sounding-copy"
+      ],
+      "query": "Rewrite this section in my voice. Here's a sample of my writing for reference.",
+      "files": [],
+      "expected_behavior": [
+        "Extracts measurable habits from the sample (sentence-length pattern, contraction rate, paragraph openings, punctuation preferences, recurring words)",
+        "Matches those habits instead of picking a generic register like 'professional' or 'casual'",
+        "Preserves the author's vocabulary level rather than upgrading it",
+        "Takes style parameters from the sample without copying its content or claims"
+      ]
+    },
+    {
+      "skills": [
+        "human-sounding-copy"
+      ],
+      "query": "Tighten this draft, it's way too long for what it says.",
+      "files": [],
+      "expected_behavior": [
+        "Cuts 20-30% of the words without dropping an idea",
+        "Removes preamble, restatement of the heading, and trailing recap paragraphs",
+        "Keeps the specific details and deletes the padding rather than the reverse"
+      ]
+    },
+    {
+      "skills": [
+        "human-sounding-copy"
+      ],
+      "query": "Write a blog post about why we rebuilt our billing system.",
+      "files": [],
+      "expected_behavior": [
+        "Consults references/exemplars.md and picks one writer close to the genre before drafting",
+        "Names the specific moves being borrowed rather than vaguely gesturing at a style",
+        "Does not blend several exemplar voices at once",
+        "Produces prose with concrete detail and stated stakes, not a generic explainer"
+      ]
+    },
+    {
+      "skills": [
+        "human-sounding-copy"
+      ],
+      "query": "Write the copy for the pricing page.",
+      "files": [],
+      "expected_behavior": [
+        "Writes entirely in lowercase, including sentence openings, proper nouns, and headings",
+        "Keeps casing only where required: code, identifiers, file paths, and direct quotations",
+        "Does not silently normalize the lowercase style back to sentence case anywhere in the output"
       ]
     },
     {

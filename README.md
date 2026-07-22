@@ -17,7 +17,7 @@ They are small, model-agnostic, and composable. Adapt them, delete the ones you 
 
 | Skill | What it does |
 |-------|--------------|
-| [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | em dashes, jargon, all-caps eyebrows, cheap icons, the tells that read as AI-generated. |
+| [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | Make writing read as a specific human wrote it: cut AI verbosity, strip the lexical/punctuation/formatting tells, then rebuild with cohesion, rhythm, concreteness, stakes, and voice. |
 
 ### Design
 
