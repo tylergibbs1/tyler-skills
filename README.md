@@ -18,6 +18,7 @@ They are small, model-agnostic, and composable. Adapt them, delete the ones you 
 | Skill | What it does |
 |-------|--------------|
 | [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | Writing that reads like a model wrote it: verbose, generic, em dashes, title-case headings, no stakes and no voice. Seven passes, plus exemplar writers to study and the research behind each tell. |
+| [lulu-comms](./skills/writing/lulu-comms/SKILL.md) | Lulu Cheng Meservey's comms operating system for copy, mission, branding, and PR: every tactic traces to a business objective, hook before story before channel, evidence over adjectives, plus launch/crisis/apology playbooks. |
 
 ### Design
 

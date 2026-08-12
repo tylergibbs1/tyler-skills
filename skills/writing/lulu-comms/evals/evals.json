@@ -1,0 +1,70 @@
+{
+  "skill_name": "lulu-comms",
+  "evals": [
+    {
+      "skills": [
+        "lulu-comms"
+      ],
+      "query": "Write the fundraising announcement for our Series A.",
+      "files": [],
+      "expected_behavior": [
+        "Asks for or states the business objective (hiring, sales, trust) and shapes the message to it rather than making the announcement about the money",
+        "Centers customers and evidence (specific results, validation from customers/employees/investors), not 'we are excited to announce'",
+        "Writes in the founder's voice with a hook in the first line and one primary CTA",
+        "Addresses any obvious negative fact directly instead of hiding it"
+      ]
+    },
+    {
+      "skills": [
+        "lulu-comms"
+      ],
+      "query": "Can you review our mission statement: 'Our mission is to transform the future of work through innovative technology.'",
+      "files": [],
+      "expected_behavior": [
+        "Applies the logo-swap test and flags that any competitor could publish this unchanged",
+        "Pushes for a specific change, specific beneficiary, and distinctive mechanism or belief",
+        "Notes that a mission should filter (attract believers, repel misaligned people) and constrain decisions",
+        "Offers a rewritten version using the 'we exist to [change] for [people] by [mechanism]' structure"
+      ]
+    },
+    {
+      "skills": [
+        "lulu-comms"
+      ],
+      "query": "A journalist published a story with a false claim about us. Draft our response.",
+      "files": [],
+      "expected_behavior": [
+        "Asks whether the claim is material and reaches people who matter before recommending a response",
+        "Corrects the central false claim with primary-source evidence, then supplies a coherent better story rather than a fact dump",
+        "Addresses the actual audience, not the journalist as the ultimate audience",
+        "Points to an owned canonical source for the complete record"
+      ]
+    },
+    {
+      "skills": [
+        "lulu-comms"
+      ],
+      "query": "We messed up and took down customer data for six hours. Write the apology.",
+      "files": [],
+      "expected_behavior": [
+        "Uses 'I'm sorry I...' from a specific named human, never 'I'm sorry if...'",
+        "Names the specific failure and impact with no euphemisms or passive voice",
+        "Makes amends with only commitments that are certain to be met, and promises a follow-up",
+        "Does NOT hedge, minimize, or bury the apology under context"
+      ]
+    },
+    {
+      "skills": [
+        "lulu-comms"
+      ],
+      "query": "Should we hire a PR agency or go direct for our launch?",
+      "files": [],
+      "expected_behavior": [
+        "Frames the decision as owning story and strategy in-house while optionally delegating execution (pitching, outreach, project management) to an agency",
+        "Starts from the business objective and audience before recommending channels",
+        "Recommends an owned canonical version of the news, with earned media used selectively for fit and validation",
+        "Does NOT frame it as a binary between ignoring press and outsourcing everything"
+      ]
+    }
+  ]
+}
