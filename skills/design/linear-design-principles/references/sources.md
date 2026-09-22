@@ -22,8 +22,28 @@
 - Settings are not a design failure: https://linear.app/now/settings-are-not-a-design-failure
 - Building what customers need: https://linear.app/now/building-what-customers-need
 - Dashboards best practices: https://linear.app/now/dashboards-best-practices
+- Why we committed to a zero-bugs policy (Artman, Roman, Sep 24, 2025): https://linear.app/now/zero-bugs-policy
+- Rethinking the startup MVP (Artman): https://linear.app/now/rethinking-the-startup-mvp-building-a-competitive-product
+- Continuous planning in Linear (Nan Yu, Oct 30, 2025): https://linear.app/now/continuous-planning-in-linear
+- Designing remote work at Linear (Oct 29, 2025): https://linear.app/now/designing-remote-work-at-linear
+- How we hire at Linear (Apr 28, 2026): https://linear.app/now/how-we-hire-at-linear
+- CX in Linear (Nov 6, 2025): https://linear.app/now/cx-in-linear
+- A Linear spin on Liquid Glass (Robb Böhnke, Oct 21, 2025): https://linear.app/now/linear-liquid-glass
+- Styling Linear for the future: StyleX (Kenneth Skovhus, Aug 26, 2026): https://linear.app/now/styling-linear-for-the-future-stylex
+- Linear Method pages used directly: https://linear.app/method/introduction · https://linear.app/method/scope-projects · https://linear.app/method/prioritize-enablers-and-blockers · https://linear.app/method/build-with-users · https://linear.app/method/launching · https://linear.app/method/set-useful-goals
+- Product docs used for workflow UX: https://linear.app/docs/triage · https://linear.app/docs/linear-asks · https://linear.app/docs/notifications · https://linear.app/docs/select-issues · https://linear.app/docs/peek · https://linear.app/mobile · https://linear.app/changelog/2026-09-03-priority-inbox
 
-### Agent era (2026)
+### Agent era (2025–2026)
+- Agent Interaction Guidelines (AIG), 2025, "a living document": https://linear.app/developers/aig
+- Our approach to building the Agent Interaction SDK (Leela Senthil Nathan, Aug 1, 2025): https://linear.app/now/our-approach-to-building-the-agent-interaction-sdk
+- Developer docs: https://linear.app/developers/agents · https://linear.app/developers/agent-interaction · https://linear.app/developers/agent-best-practices · https://linear.app/developers/deprecations · https://linear.app/docs/agents-in-linear
+- How we built Triage Intelligence (Gillet, Wolting, Sep 3, 2025): https://linear.app/now/how-we-built-triage-intelligence · auto-apply changelog: https://linear.app/changelog/2025-09-19-auto-apply-triage-suggestions
+- Self-driving SaaS (Karri Saarinen, Oct 22, 2025): https://linear.app/now/self-driving-saas
+- Introducing Linear Agent (Mar 24, 2026): https://linear.app/changelog/2026-03-24-introducing-linear-agent
+- Introducing Loops (Nan Yu, Jul 20, 2026): https://linear.app/now/introducing-loops
+- How we built Linear Agent (Matthijs Wolting, Aug 10, 2026): https://linear.app/now/how-we-built-linear-agent
+- How to design for human-agent interaction (Saarinen, Every, Apr 3, 2026): https://every.to/thesis/how-to-design-for-human-agent-interaction
+- Linear data report, Edition 01 (2026): https://linear.app/data
 - Issue tracking is dead / the next system: https://linear.app/next (Mar 24, 2026)
 - Code Intelligence for Linear Agent: https://linear.app/now/code-intelligence-for-linear-agent (May 14, 2026)
 - Code review should be fast: https://linear.app/now/code-review-should-be-fast (May 28, 2026)
@@ -43,7 +63,9 @@
 ## Technical (speed / sync engine)
 - *How's Linear so fast? A technical breakdown*: https://performance.dev/how-is-linear-so-fast-a-technical-breakdown
 - Local-first / sync engine overviews: https://bytemash.net/posts/i-went-down-the-linear-rabbit-hole/ and https://shivekkhurana.com/blog/sync-engines/
-- Tuomas Artman's public talks on the sync engine
+- Scaling the Linear sync engine (Artman talk, Jun 29, 2023): https://linear.app/now/scaling-the-linear-sync-engine
+- Reverse-engineered sync engine write-up, endorsed by Artman as "pretty awesome (and correct)": https://github.com/wzhudev/reverse-linear-sync-engine
+- Artman on sync's real payoff being developer velocity: https://x.com/artman/status/1558081796914483201 · https://newsletter.pragmaticengineer.com/p/linear
 
 ## Background
 - Contrary Research business breakdown: https://research.contrary.com/company/linear
@@ -104,8 +126,9 @@ Used to test where Linear's principles generalize, where they break, and where t
 
 ## Sourcing caveats
 - Much of the strongest material is **first-party** (Linear's own blog and founder talks): candid but self-promotional. Claims like "quality drives growth" are framed by Linear as causal but not independently audited.
+- **Designer Fund's "AI design at Linear"** (Aug 12, 2026, https://designerfund.substack.com/p/ai-design-linear) reports individual designers' practices (e.g., one designer avoids AI for critique and copy). Treat these as individual habits, not team rules.
 - The **2026 agent-era posts** (linear.app/next and the Diffs / Coding Sessions / bug-fix cluster) are product-launch announcements as much as essays. Adoption stats (75%+ of enterprise workspaces, 5x growth, ~25% agent-authored issues) are Linear's own and point-in-time; treat the underlying principles (context over handoffs, code-is-useful-not-just-correct, human accountability) as the durable part and the feature names/numbers as a snapshot.
-- **Sync-engine internals** (conflict resolution, CRDT vs. OT) are partly reverse-engineered by third parties; some specifics are inferred from talks. The "<50ms" page-load figure is third-party measurement, not an official benchmark.
+- **Sync-engine internals** are partly reverse-engineered by third parties, but the write-up Artman endorsed settles the main question: OT-like with server-ordered transactions, not a CRDT. Finer details (client-side rollback) remain inferred. The "<50ms" page-load figure is third-party measurement, not an official benchmark.
 - The Figma "10 rules" article uses "differentiator," "people pay attention," "win a market", not "compounding." Treat any compounding framing as interpretation.
 - Critics note the opinionated model fits software product teams better than teams needing deep customization; the "Project" abstraction is contested. These are legitimate limitations, not universal truths.
 

@@ -249,6 +249,62 @@
         "May note motion as a communication channel and honoring prefers-reduced-motion",
         "Does NOT reflexively forbid all delight, nor endorse celebratory motion on every routine action"
       ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "We're letting third-party AI agents work inside our project management tool. How should an agent show up and behave when someone assigns it a task?",
+      "files": [],
+      "expected_behavior": [
+        "Cites Linear's Agent Interaction Guidelines or their substance: disclose it's an agent, work through native UI/actions, give instant feedback, show its state, stop when asked, human stays accountable",
+        "Recommends keeping a human as owner/assignee and giving the agent a separate delegate role, so accountability is structural rather than policy",
+        "Suggests a small typed set of agent activities/states (thinking, acting, asking, done, error) rather than free-form comments",
+        "Recommends a distinct least-privilege identity for the agent rather than a borrowed human account",
+        "Does NOT suggest letting the agent become the sole owner of the task"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "Our AI triage feature takes about two minutes to produce suggestions. The team says 'Linear style means no spinners', so they want to hide it until it's done. Is that right?",
+      "files": [],
+      "expected_behavior": [
+        "Scopes the no-spinner rule to deterministic operations that can be made instant",
+        "Says inherently slow AI work needs a designed wait: immediate acknowledgement, honest live progress (e.g., a thinking state with a timer or trace), and a defined timeout/stale state",
+        "Recommends AI suggestions be visually distinct from human-set values, with reasoning available on demand",
+        "Does NOT recommend hiding the work silently until it completes"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "We want our AI to auto-assign and auto-label incoming bugs. Should we just turn it on for everything?",
+      "files": [],
+      "expected_behavior": [
+        "Frames autonomy as graded levels (suggest, first pass with correction, full) granted one decision type at a time",
+        "Recommends per-property or per-value opt-in to auto-apply, with AI-applied values clearly marked and cheap to override",
+        "Warns against turning literal human-in-the-loop into per-step approval, while keeping confirmation for consequential or irreversible actions",
+        "Does NOT recommend flipping full autonomy on for all properties at once"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "Does Linear have a point of view on mobile apps? We're designing a companion mobile app for our desktop-first B2B tool.",
+      "files": [],
+      "expected_behavior": [
+        "Says yes: Linear treats mobile as an away-from-keyboard sidekick with a narrowed job (capture, inbox triage, updates, reading), not a shrunken desktop",
+        "Mentions dense-professional legibility over trend (ProKit framing, dropping effects like refraction) and keeping platform accessibility settings working",
+        "Defers touch-layout mechanics to mobile-specific guidance",
+        "Does NOT claim Linear has published no mobile philosophy"
+      ]
+    },
+    {
+      "skills": ["linear-design-principles"],
+      "query": "We have 400 open bugs and a 'we'll get to it' backlog. How would Linear handle this?",
+      "files": [],
+      "expected_behavior": [
+        "Describes the zero-bugs mechanism: a one-time reset that pauses project work, then fix-within-SLA or explicit won't-fix with no backlog option",
+        "Mentions the SLA shape (e.g., 48 hours high priority, 7 days otherwise) and load rebalancing / rotating goalie",
+        "Gives the rationale that a fix costs the same now or later, and fast fixes build customer trust",
+        "Does NOT recommend simply grooming or re-prioritizing the backlog"
+      ]
     }
   ]
 }

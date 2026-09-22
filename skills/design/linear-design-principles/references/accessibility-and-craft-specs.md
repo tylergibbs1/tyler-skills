@@ -1,6 +1,6 @@
 # Accessibility and quantified craft specs
 
-Linear's own writing treats accessibility lightly, it mentions only "a baked-in accessibility contrast variable" derived in LCH. That's a real gap: accessibility and the measurable details of interface craft are **structure, not polish**, and in the agent era they have to be written down so an agent can apply and check them. This file is the checkable layer the rest of the skill (which is about product judgment) deliberately doesn't cover.
+Linear's own writing treats accessibility lightly: "a baked-in accessibility contrast variable" derived in LCH, an iOS material that "mirrors [Increase Contrast] behavior exactly" and drops refraction for legibility, an underline-links preference, and focus-ring fixes logged as shipped work. That's a real gap: accessibility and the measurable details of interface craft are **structure, not polish**, and in the agent era they have to be written down so an agent can apply and check them. This file is the checkable layer the rest of the skill (which is about product judgment) deliberately doesn't cover.
 
 Two reasons this belongs in the skill: (1) it's the dimension Linear under-documents, and (2) machines can't read tacit taste, codified rules are how craft scales across a large org and how agents apply it (see boundary #7 in `boundaries-and-peers.md`).
 
@@ -28,6 +28,8 @@ These are the small, checkable numbers that separate "looks fine in a mockup" fr
 - **Focus ring:** a consistent, visible focus ring on all focusable elements, same treatment everywhere, offset so it isn't clipped. (Rauno)
 - **Animate only compositor-friendly properties:** `transform` and `opacity`. **Never `transition: all`**: it animates layout-triggering properties and causes jank. (Vercel WIG; matches Linear's own "GPU-composited properties only" rule.)
 - **Optical, not mathematical, alignment:** nudge icons and glyphs to look centered rather than being numerically centered; align to the cap height / optical center, not the bounding box.
+- **Submenu safe areas (menu aim):** a pointer moving diagonally toward an open submenu must not close it. Use a dynamic safe triangle based on where the submenu sits. Most software "only works if you exactly hover over the menu" (Karri Saarinen, on a Linear engineer building this unasked).
+- **Consistent interaction timing:** hover-in/out and press durations are a system standard, and one component breaking it is a defect (the Quality Wednesdays origin story). Codify them as tokens so lint can catch drift (Linear's StyleX rules do this for animation).
 - **Tabular numerals** for any changing or column-aligned numbers (counts, timers, tables) so digits don't shift width.
 - **Text:** prevent orphans/widows on headings; cap line length for readability; use real ellipsis/truncation with a title attribute, not silent clipping.
 - **Touch/scroll hygiene:** disable text selection on controls that act like buttons; avoid accidental double-tap zoom on tap targets; respect safe-area insets on mobile.
