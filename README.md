@@ -36,6 +36,12 @@ Skills for deciding what to build and in what order.
 |-------|--------------|
 | [researching-latent-demand](./skills/product/researching-latent-demand/SKILL.md) | Decide what to build from real pain/market research and the painkiller-not-vitamin test, then file as issues. |
 
+### Research
+
+| Skill | What it does |
+|-------|--------------|
+| [scientific-literature-discovery](./skills/research/scientific-literature-discovery/SKILL.md) | Find evidence-linked connections between scientific papers, audit prior work, challenge competing explanations, and design falsifiable tests. |
+
 ### Workflows
 
 User-invoked multi-agent orchestration (reach them by name).
