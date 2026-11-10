@@ -59,6 +59,7 @@ Skills for deciding what to build and in what order.
 | Skill | What it does |
 |-------|--------------|
 | [scientific-literature-discovery](./skills/research/scientific-literature-discovery/SKILL.md) | Find evidence-linked connections between scientific papers, audit prior work, challenge competing explanations, and design falsifiable tests. |
+| [wcml](./skills/research/wcml/SKILL.md) | Run ML work like a world-class research team: trusted eval, error review by eye, ceilings before methods, one variable per experiment with a control and a pre-written kill line, fast proxies, and a ledger of every result. Ships a paired group bootstrap and a contact-sheet script; test scenarios in `evals/wcml/`. |
 
 ### Workflows
 

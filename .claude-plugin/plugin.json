@@ -10,6 +10,7 @@
     "./skills/design/creating-aws-architecture-diagrams",
     "./skills/product/researching-latent-demand",
     "./skills/workflows/orchestrating-subagents",
-    "./skills/workflows/shipping-pr-reviews"
+    "./skills/workflows/shipping-pr-reviews",
+    "./skills/research/wcml"
   ]
 }
