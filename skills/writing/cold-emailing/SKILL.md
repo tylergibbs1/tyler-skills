@@ -1,146 +1,27 @@
 ---
 name: cold-emailing
-description: Finds the right person, drafts a short cold email or DM in the user's own voice, and sends from Gmail only on their say-so. Use for any cold outreach, a follow-up on unanswered emails, or a "who should I reach out to" question, whether the pitch is a job or a product. Triggers on "cold email," "cold DM," "reach out," "hiring manager," "outreach," "follow up."
+description: Writes cold emails and DMs a stranger will read and answer. Short, opened on the reader, one proof, one small question, in the sender's own voice. Use when writing, editing, sending, or following up on any cold outreach (job search, sales, partnerships, fundraising, press), or when deciding who to reach out to. Triggers on "cold email," "cold DM," "reach out," "outreach," "follow up," "hiring manager," "intro email."
 ---
 
 # Cold Emailing
 
-A good cold email is about 90 words from one specific person to another. It opens on the reader, gives one piece of proof, and ends on one question that takes a line to answer. The steps below protect that, and make sure nothing goes out that the user has not read.
+A cold email works when a stranger can read it on one phone screen, see that it was written to them, and answer in one line. Every practice below serves one of those three.
 
-## Workflow
+This is for one-to-one email written by hand. It is not for sequences or blasts.
 
-Copy this checklist and check items off as you go:
+## The email in five moves
 
-```
-Cold email progress:
-- [ ] 1. Decide the pitch
-- [ ] 2. Pick the readers
-- [ ] 3. Check what the user already sent
-- [ ] 4. Find the address and one real observation
-- [ ] 5. Write the email
-- [ ] 6. Run the email checks
-- [ ] 7. Save Gmail drafts and read each one back
-- [ ] 8. Send only when the user says to
-- [ ] 9. Confirm delivery
-- [ ] 10. Follow up once
-```
+1. **Them.** Open on one true, specific thing about the reader. "Saw ..."
+2. **A guess.** Say what that probably means for them. "Guessing ..." It shows thought, and a wrong guess still gives them an easy reason to reply.
+3. **One proof.** Who the sender is in a sentence, then one thing they did, with a result.
+4. **Pressure off.** Say what the sender wants and make it easy to say no. "I want to build this on your team, not sell you anything."
+5. **One question** that takes a line to answer. "Who on your team should I talk to?"
 
-- **New outreach?** Run all ten steps.
-- **Follow-up on earlier emails?** Run step 3, then step 10, then steps 6 to 9.
-- **Wording help on a draft the user wrote?** Run steps 5 and 6 only.
-
-Steps 1 to 6 are judgment. Steps 7 to 9 are fragile, so run them exactly as written. If a connector (Gmail, Clay, Exa) is missing, say which one and keep going with what you have: web search for hiring posts, and the email text in chat for the user to send themselves.
-
-## The user's profile
-
-The email is only as good as what you know about the person sending it. Before step 5, read `references/profile.md`. It holds who the user is in one sentence, their proof lines, emails they have sent, and what must not be said. The file is gitignored, so it can name a real employer and real numbers without publishing them.
-
-If it is missing, ask the user for the items in `references/profile.example.md`, draft from their answers, and offer to save them as `references/profile.md`. Never fill a gap with an invented credential.
-
-## 1. Decide the pitch
-
-One email carries one pitch.
-
-- **Job outreach pitches the person.** Anything they built is one line of proof, and the closing question is about the role or who to talk to. No demo offers. A job email that leads with a side project reads as a sales pitch, and the user ends up writing a second email to say they wanted a job.
-- **Product outreach pitches the product.** The user is the credential, and the question is about the reader's problem.
-
-If you can't tell which one this is, ask before drafting.
-
-## 2. Pick the readers
-
-For a job, email the people who feel the open role. Skip recruiters: they get the most cold email and can only route it.
-
-1. The manager who owns the role. Look for their own "I'm hiring" post.
-2. The tech lead or a senior engineer on that team.
-3. The director or head of the org.
-4. A senior engineer one team over, who can give a name.
-
-For a product, email the person who lives with the problem, then their manager.
-
-Pick two or three readers per company, at different levels. More than that looks like a blast once they compare notes. Find them with `Exa:web_search_exa` (people search and LinkedIn posts), and use `Clay:search-contacts-by-name` when Exa can't open a profile. If the user shares an application tracker, start from the roles still pending, and write "I applied" only when the tracker or a confirmation email shows it.
-
-## 3. Check what the user already sent
-
-Do this before recommending anyone. A list that includes someone the user already emailed costs their trust in the rest of it.
-
-- Run `Gmail:search_threads` with `in:sent to:company.com`, then `Gmail:get_thread` on every hit. Search previews show only the oldest messages in a thread, so a preview can hide a follow-up or a reply.
-- Search the inbox for replies, bounces, and auto-replies from the same domain. An auto-reply saying someone left often names the team to ask for.
-
-| What Gmail shows | Status |
-|---|---|
-| Nothing sent | New |
-| One email, under five days old | Wait |
-| One email, five or more days old, no reply | Follow-up due |
-| Two emails, no reply | Stop. Pick someone else on the team |
-| A bounce, or "no longer here" | Dead address. Pick someone else |
-
-## 4. Find the address and one real observation
-
-**Address.** `Clay:add-contact-data-points` with the Email data point spends the user's Clay credits, so tell them how many lookups you ran. Apollo quotes a credit cost before it spends: pass that to the user and wait for a yes. These addresses are reported, not verified. Flag the ones that look like guesses. Only a reply or an auto-reply proves an address is live. Keep the user's own email address and personal details out of lookup tools unless they approve.
-
-**Observation.** One true, specific thing about the reader's team that you found in this session: their hiring post, a line in the job posting, a talk, a launch. Never invent one, and never imply a referral or a relationship that isn't real. If nothing turns up, use the job posting.
-
-Before drafting, show the user a table: name, title, why this reader, address or profile, and status.
-
-## 5. Write the email
-
-Five moves, in order:
-
-1. **Them.** "Saw ..." and the observation.
-2. **A guess.** "Guessing ..." and what that probably means for them. It shows the user thought about their problem, and it invites a correction.
-3. **One proof.** Who the user is in a sentence, then one thing they did, with a result. Take both from the profile, word for word where it gives a line.
-4. **Pressure off.** What the user wants, and that they aren't selling. "I applied for the fleet software role. I want to build this stuff on your team, not sell you anything."
-5. **One question** that takes a line to answer. "You the right person to talk to?" "Who on your team should I talk to?" A name is easy to give. A meeting is not.
-
-End with the user's first name on its own line and nothing after it.
-
-**Subject.** Lowercase, three to five words, in the form "topic at company": `fleet software at acme`. A capital on the company name is fine. No question, no first name, no fake "RE:".
-
-**Voice.** The profile's samples come first. Copy the user's greeting, sentence length, pet phrases, and sign-off, and don't upgrade their vocabulary. Where the samples are silent, default to:
-
-- "Hey {first name}," using the name the reader goes by, then a blank line.
-- Short paragraphs, three sentences at most, with a blank line between. The whole email fits on one phone screen.
-- Contractions and fragments. "Saw your post." "Guessing that."
-- Words a high schooler would use.
-- Normal capitals in the body. Only the subject is lowercase, even when another style rule says to write everything in lowercase.
-- No em dashes and no exclamation marks.
-
-**Keep out of the email:**
-
-- Links and attachments. Some corporate filters flag outside senders who include them, and the Gmail connector mangles links (step 7). If the user wants a link in the email, they type it in Gmail themselves.
-- Resume-speak. Counts of projects, years of experience, "passionate," "proven track record." A line like "shipped 20+ projects across the stack" is trite and bland. Proof is something a stranger can picture or check.
-- Stock phrases. "Hope this finds you well," "I love what you're building," "pick your brain," "quick question," "I know you're busy."
-- A second question, a second proof, or a list of skills.
-- A signature block, title, or phone number.
-
-**Proof rules.** One proof per email, matched to the reader's team. Don't round a number, upgrade a claim ("entered" is not "won"), or add a time word that isn't true.
-
-## 6. Run the email checks
+Then a first name. About 90 words in all.
 
 ```
-Email checks:
-- [ ] 100 words or fewer, greeting and sign-off included
-- [ ] First paragraph is about the reader, and the observation was found this session
-- [ ] One proof that a stranger can picture or check
-- [ ] Exactly one question mark, on a question that takes a line to answer
-- [ ] No links, attachments, em dashes, exclamation marks, or signature block
-- [ ] No resume-speak or stock phrases
-- [ ] Subject is three to five words, lowercase apart from the company name
-- [ ] No two readers on the same team get the same opening
-- [ ] Every claim about the user comes from the profile or from the user
-```
+Subject: fleet software at acme
 
-If a check fails, rewrite and run the whole list again. Move on only when every box is checked.
-
-## Examples
-
-The sender, readers, and companies here are invented.
-
-**Example 1: job outreach.** Reader: tech lead on a warehouse fleet software team. Observation: the job posting says the team is putting AI agents in front of operators.
-
-Subject: `fleet software at acme`
-
-```
 Hey Sam,
 
 Saw your team is putting AI agents in front of warehouse operators to diagnose fleet issues. Guessing that comes down to knowing what's happening on the floor.
@@ -154,11 +35,90 @@ You the right person to talk to?
 Riley
 ```
 
-**Example 2: product outreach.** Reader: operations manager at a dental group who posted a third front-desk opening.
+The people and companies in every example here are invented.
 
-Subject: `after-hours calls at northwind`
+## Get three things before writing
+
+- **A real observation.** Something found, not imagined: their hiring post, a line in the job posting, a talk, a launch. If nothing turns up, use the posting or the company's own page. If even that gives nothing to say, this is the wrong reader.
+- **The sender's proof.** One or two things they did, with results, in their words. Ask for it. Never fill a gap with an invented credential.
+- **The sender's voice.** Two or three emails they actually sent. Copy the habits: greeting, sentence length, pet phrases, sign-off. Don't upgrade their vocabulary.
+
+## Practices
+
+### Who to write to
+
+- **The person who owns the problem, not the gatekeeper.** For a job that is the hiring manager or the team's tech lead, not a recruiter. For a product it is the person who lives with the problem, then their boss. Gatekeepers get the most cold email and don't make the decision.
+- **Follow their own words.** A manager's "we're hiring" post tells you who owns the role and hands you the opening line.
+- **Two or three people per organization, at different levels, each with a different opening.** More than that reads as a blast once they compare notes.
+- **Look for a warm path first.** Someone who already replied to the sender, interviewed them, or works there beats any stranger.
+- **Check what was already sent.** Before naming anyone, search the sender's sent mail for that organization and read whole threads, not previews. Recommending someone already contacted, or sending a third email, costs trust.
+- **Agree on the list before drafting.** Show the sender each name, role, why this person, and whether they've been contacted.
+
+### What to say
+
+- **One email, one pitch.** The person (a job), the product (a sale), the company (a raise), or the story (press). Never two at once. A job email that leads with a side project reads as a sales pitch, and the sender ends up writing a second email to explain.
+- **Proof is something a stranger can picture or check.** A thing built, a number against a target, a named result. Not a count of projects, years of experience, or an adjective. "Shipped 20+ projects" says nothing. "Cut route planning from 40 seconds to 3" does.
+- **One proof, matched to the reader.** Choose the one their team would care about and save the rest for the reply.
+- **Ask for something small.** A name is easy to give. A meeting is not. Don't ask to "pick their brain."
+- **Never invent.** Not the observation, not a referral, not a number. Don't round up, and don't upgrade a claim: "entered" is not "won," and "I applied" is only for someone who did. No fake "RE:" subject lines. A cold email has nothing going for it but the reader's trust.
+
+### How it should read
+
+- **100 words or fewer, greeting and sign-off included.** Past one phone screen, it doesn't get finished.
+- **Short paragraphs and plain words.** Three sentences a paragraph at most, a blank line between, words a high schooler would use. Fragments are fine: "Saw your post." "Guessing that."
+- **A subject that looks like a note from a colleague.** Lowercase, three to five words, "topic at company": `fleet software at acme`. No question and no first-name merge.
+- **The sender's voice, not a template's.** Their greeting, their pet phrases, their sign-off. Normal capitals in the body even when the subject is lowercase.
+- **No links or attachments in the first email.** Some filters flag outside senders who include them, and a link asks for a click before there is any trust. Offer it in the reply.
+- **No stock phrases.** "Hope this finds you well," "I love what you're building," "quick question," "I know you're busy."
+- **No em dashes, exclamation marks, or signature block.** Sign with a first name.
+
+### Sending
+
+- **The sender reads every draft, and only their "send" sends.** Sending can't be undone. Liking the wording is not an instruction to send, and if the text has to change after they approved it, ask again.
+- **Read the draft back from the mailbox before sending.** Mail tools can change text. In November 2026 the Claude Gmail connector was rewriting every link into a `google.com/url` redirect, which is one more reason to leave links out.
+- **Check the inbox right before sending.** A reply or a rejection from that organization changes the email.
+- **Confirm, then listen.** Each email should sit in Sent once, with no draft left over. A few minutes later, look for bounces and auto-replies. An auto-reply proves the address is live, and "no longer here" often names who to write to instead.
+- **Treat looked-up addresses as guesses** until something comes back. Say which ones are unverified, tell the sender what a lookup costs before spending their credits, and keep the sender's own details out of lookup tools unless they say otherwise.
+- **Send in the reader's morning** if there's a choice: 7 to 9:30, their time zone.
+
+With the Gmail connector, the calls are `Gmail:create_draft`, `Gmail:get_draft` to read it back, and `Gmail:send_message` with only the `draftId`.
+
+### Following up
+
+- **Once, about five days later, in the same thread.**
+- **Bring something new.** A sharper proof, a result, or a correction. If the first email had a flaw, own it in one line. Never "just bumping this."
+- **Stop at two.** A third unanswered email reads as pestering. Try a different person or a DM.
+- **When someone replies,** answer the same day, about as briefly as they wrote, and thank them with one specific detail. If they point to someone else, write to that person and say who sent you. Now the referral is true.
+
+### DMs
+
+The same five moves in two or three sentences, with no subject and no sign-off. Write the text for the sender to paste unless they ask you to send it.
+
+## Checks
+
+Run these on every email. If one fails, rewrite and run the list again.
 
 ```
+Before it goes out:
+- [ ] 100 words or fewer
+- [ ] Opens on the reader, with an observation that was found, not imagined
+- [ ] One pitch and one proof, and the proof is something a stranger can check
+- [ ] Exactly one question, answerable in one line
+- [ ] Every claim about the sender came from the sender
+- [ ] No links, attachments, stock phrases, em dashes, exclamation marks, or signature block
+- [ ] Subject is three to five lowercase words
+- [ ] Sounds like the sender's own emails
+- [ ] No two readers at one organization get the same opening
+- [ ] The sender has read this exact text and said to send it
+```
+
+## More examples
+
+**Product outreach.** The pitch is the product, the proof is a customer result, and the question is about the reader's problem.
+
+```
+Subject: after-hours calls at northwind
+
 Hey Dana,
 
 Saw you're hiring a third front-desk person for the Maple Street office. Guessing the phones are the reason.
@@ -172,7 +132,7 @@ How are after-hours calls getting booked today?
 Riley
 ```
 
-**Example 3: follow-up**, five days after Example 1, in the same thread.
+**Follow-up**, five days after the first example, in the same thread.
 
 ```
 Hey Sam,
@@ -188,56 +148,32 @@ Is there someone on your team I should be talking to?
 Riley
 ```
 
-## 7. Save Gmail drafts and read each one back
+**Before and after.** The usual first draft:
 
-1. Call `Gmail:create_draft` with `to`, `subject`, and a plain-text `body`. One reader per draft, no cc or bcc, no Markdown, and no `htmlBody`.
-2. Call `Gmail:get_draft`, then compare the `to` address, subject, and body against what you wrote.
-3. To fix a draft, call `Gmail:update_draft` with the `draftId` and the new `body` (the address and subject carry over), then read it back again.
+```
+Subject: Experienced Engineer Seeking Opportunities!
 
-**Known problem, observed November 2026.** The Claude Gmail connector rewrites any URL or bare domain in a draft into a `google.com/url?q=...` redirect. In `body`, the redirect URL replaces the visible text. In `htmlBody`, the text looks right but the link points at a Google redirect carrying a token that expires in about a day, which a corporate filter or a careful reader can take for phishing. So drafts carry no links, and disguising the domain to slip past the rewrite is not an option. Before trusting a link again, test it on one draft and look for `google.com/url` in the read-back.
+Dear Hiring Manager,
 
-Tell the user the drafts are in Gmail and show them the text of each. They read every one before anything goes out.
+I hope this email finds you well. I am a passionate backend engineer with 8+ years of experience and a proven track record across 20+ projects. I love what your company is building and would love to pick your brain about how my skills in Python, Go, and Kubernetes could add value. Could we schedule a 30 minute call next week? Also, are you the right person, or should I contact HR? My portfolio: https://example.com
 
-## 8. Send only when the user says to
+Best regards,
+Riley Chen
+Senior Backend Engineer | 555-0100
+```
 
-A sent email can't be pulled back, so sending needs a clear instruction from the user in the conversation, like "send them." Liking the wording is not that instruction.
+The rewrite is the first example on this page. It opens on the reader's team where this one opens on the sender. One result with a number replaces the skills list. One question that takes a line replaces a call request plus a second question. The link, the stock phrases, the exclamation mark, and the signature block are gone, and the subject went from a headline to `fleet software at acme`.
 
-Right before sending:
+## Where this has limits
 
-1. Search the inbox for anything new from the readers' domains. A reply or a rejection changes the email.
-2. Call `Gmail:get_draft` on each draft one last time.
-3. Call `Gmail:send_message` with only the `draftId`.
+- **One-to-one only.** Bulk or automated outreach is marketing email, and the law on it differs by country. Some places require an opt-out line and a postal address, others require consent first. Check the rules for the reader's country before sending a product pitch at any volume.
+- **Register travels badly.** "Hey Sam" and sentence fragments fit US tech. For academia, government, or a more formal culture, keep the five moves and raise the formality.
+- **The evidence is thin.** These practices come from practitioner advice and one campaign, not from controlled tests. The sender's own reply rates outrank every rule here. If their long emails get answered, write long emails.
+- **Wording can't fix fit.** With no real observation and no relevant proof, the answer is a different reader, not a better sentence.
 
-If the text has to change from what the user approved, tell them what and why, and get a yes first.
+## Sources
 
-Suggest 7 to 9:30 AM in the reader's time zone, when most people clear their inbox. Say so once. If the user says now, send now.
-
-## 9. Confirm delivery
-
-1. Call `Gmail:search_threads` with `in:sent` and each reader's address. Each email should appear once.
-2. Call `Gmail:list_drafts`. Nothing should be left over.
-3. Wait two or three minutes, since a bad address usually bounces within a minute or two. Then search the inbox with today's date: `{from:mailer-daemon from:postmaster subject:"Automatic reply" from:company.com} after:YYYY/MM/DD -in:sent`.
-4. Read every auto-reply and check its dates against a calendar. A stale out-of-office still proves the address is live.
-
-Report to the user in this order: who it went to, anything that differs from what they approved, bounces, auto-replies, and the follow-up date.
-
-## 10. Follow up once
-
-About five days after the first email, or on the user's own cadence if the profile gives one, reply in the same thread.
-
-- Draft it with `Gmail:create_draft`, with `replyToMessageId` set to the id of the user's first message and `to` set to the same reader. Read it back and confirm it goes to the reader and not to the user.
-- Three or four short paragraphs. If the first email had a flaw, own it in one line. Add one new thing, such as a sharper proof or a result, and end on one question. Example 3 is the model.
-- Skip "just bumping this" and "circling back."
-- Run the step 6 checks, except the one about the opening. A follow-up can open on the earlier email instead of an observation.
-- Two emails per reader is the limit, because a third unanswered email reads as pestering. After that, pick someone else on the team or write a DM.
-
-**When someone replies,** tell the user right away and draft an answer the same day, about as short as theirs. Thank them with one specific detail from what they said. If they point to someone else, email that person and say who sent the user, since now the referral is true. If they ask something personal, such as a side company, a notice period, or pay, ask the user how they want to answer.
-
-## DMs
-
-For LinkedIn or X, use the same five moves in two or three sentences, with no subject and no sign-off. Write the text for the user to paste. Don't send a DM through a browser unless they ask.
-
-## Reference files
-
-- **`references/profile.example.md`**: The template for the user's profile, filled with invented details. Copy it to `references/profile.md` and replace every line.
-- **`references/profile.md`**: The real profile. Gitignored and never committed. Read it before writing any email.
+- **r/sales, "What's your top performing cold email?"** (Reddit, about 2021). Length under 100 words, short paragraphs, plain words, one question, no links, the small ask, morning sends. Practitioner claims, not measured here.
+- **A cold sales email shared as a screenshot** (2026). The observation-then-guess opening, taking the pressure off, and a small, low-stakes ask.
+- **Ben Lang, ["15 ideas to help you build a better personal network"](https://nextplayso.substack.com/p/15-ideas-to-help-you-build-a-better)** (next play, April 2026). Be specific about the ask, make it easy for people to help, thank with a specific detail.
+- **Field notes from one outreach campaign** (November 2026). The gatekeeper rule, one pitch per email, checking sent mail first, reading drafts back, auto-replies as address checks, and the follow-up cadence.

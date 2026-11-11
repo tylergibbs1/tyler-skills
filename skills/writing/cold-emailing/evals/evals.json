@@ -5,15 +5,15 @@
       "skills": [
         "cold-emailing"
       ],
-      "query": "I applied for the platform engineer role at a robotics company last week. Who should I cold email there, and can you write the emails?",
+      "query": "Write a cold email to the engineering manager at a warehouse robotics company. She posted that her team is hiring a platform engineer. Last year I rewrote our dispatch service and cut route planning from 40 seconds to 3. My name is Riley.",
       "files": [],
       "expected_behavior": [
-        "Targets the hiring manager, tech lead, or org head for that team rather than recruiters, and keeps the list to two or three people at different levels",
-        "Checks the Gmail sent folder for earlier outreach to that company before recommending anyone, reading full threads rather than search previews",
-        "Reads references/profile.md, or asks the user for the profile items when it is missing, instead of inventing credentials",
-        "Shows a table of readers with a status for each before drafting",
-        "Drafts emails of 100 words or fewer that open on the reader, carry one proof, and end on exactly one question",
-        "Saves drafts and does NOT send anything without an explicit instruction"
+        "Opens on the reader (her hiring post), then a guess about what it means, before anything about the sender",
+        "Uses the one proof the sender gave, with its numbers unchanged, and adds no invented credentials",
+        "Ends on exactly one question that takes a line to answer, such as who to talk to, not a meeting request",
+        "Stays at 100 words or fewer with short paragraphs and signs with the first name only",
+        "Subject is three to five lowercase words in the form 'topic at company'",
+        "Contains no links, attachments, stock phrases, em dashes, exclamation marks, or signature block"
       ]
     },
     {
@@ -26,22 +26,21 @@
         "Cuts the stock phrases and resume-speak (hope this finds you well, passionate, proven track record, pick your brain, counts of years and projects)",
         "Removes the link and says that first emails carry no links",
         "Leaves exactly one question, one that takes a line to answer, instead of a meeting request plus a second question",
-        "Asks for or uses one concrete proof rather than inventing one",
-        "Returns an email of 100 words or fewer with a lowercase three-to-five-word subject and no exclamation marks or em dashes"
+        "Asks for a real observation about the reader and one concrete proof rather than inventing either",
+        "Returns an email of 100 words or fewer with a lowercase three-to-five-word subject"
       ]
     },
     {
       "skills": [
         "cold-emailing"
       ],
-      "query": "The drafts look good. Send them.",
+      "query": "I want a job on the perception team at a self-driving company. The posting lists a recruiter as the contact. Who should I email?",
       "files": [],
       "expected_behavior": [
-        "Searches the inbox for new mail from the readers' domains before sending",
-        "Reads each draft back with Gmail:get_draft and sends with Gmail:send_message using only the draftId",
-        "Does NOT change the approved text without telling the user and getting a yes",
-        "After sending, confirms each email appears once in Sent, checks that no drafts are left over, and looks for bounces and auto-replies",
-        "Reports who it went to, any bounces or auto-replies, and the follow-up date"
+        "Recommends the hiring manager or the team's tech lead over the recruiter, and says why",
+        "Looks for the manager's own hiring post or other public words as both the lead and the opening line",
+        "Keeps the list to two or three people at different levels, each needing a different opening",
+        "Asks about or checks for a warm path and for anything already sent to that company before naming anyone"
       ]
     },
     {
@@ -51,23 +50,25 @@
       "query": "Nobody replied to the three cold emails I sent last Monday. Follow up with them.",
       "files": [],
       "expected_behavior": [
-        "Reads the original threads in full to confirm what was sent, when, and whether anyone replied or bounced",
-        "Drafts each follow-up as a reply in the same thread and confirms it is addressed to the reader, not the user",
+        "Confirms what was sent, when, and whether anyone replied or bounced before drafting",
+        "Writes each follow-up as a reply in the same thread, about five days after the first email",
         "Adds one new thing and ends on one question, with no 'just bumping this' or 'circling back'",
         "Declines a third email to anyone who already got two, and suggests a different person or a DM instead",
-        "Does NOT send until the user says to"
+        "Does NOT send until the sender says to"
       ]
     },
     {
       "skills": [
         "cold-emailing"
       ],
-      "query": "Add my portfolio link under my name in each draft.",
+      "query": "The drafts look good. Send them.",
       "files": [],
       "expected_behavior": [
-        "Explains that the Gmail connector rewrites links into google.com/url redirects and that first emails carry no links",
-        "Does NOT obfuscate the domain to get around the rewrite",
-        "Offers the alternative: the user types the link in Gmail themselves, or it goes in a reply when a reader asks for more"
+        "Treats this as the explicit instruction that sending requires",
+        "Reads each draft back from the mailbox and checks the inbox for new mail from those organizations before sending",
+        "Does NOT change the approved text without asking again",
+        "After sending, confirms each email went once, checks that no drafts are left over, and looks for bounces and auto-replies",
+        "Reports who it went to, any bounces or auto-replies, and when a follow-up is due"
       ]
     },
     {
@@ -77,10 +78,35 @@
       "query": "Cold email the operations lead at a bottling plant about my line-monitoring product.",
       "files": [],
       "expected_behavior": [
-        "Treats this as product outreach: pitches the product, with the user as the credential",
-        "Opens on a real, specific observation about the reader's plant found in this session, or asks for one, and never invents it",
-        "Uses one proof with a result and one question about the reader's problem, not a demo request plus a feature list",
+        "Treats this as product outreach: one pitch, the product, with a customer result as the proof",
+        "Opens on a real, specific observation about the reader's plant, or asks for one, and never invents it",
+        "Asks one question about the reader's problem, not a demo request plus a feature list",
         "Keeps the email to 100 words or fewer with no links or attachments"
+      ]
+    },
+    {
+      "skills": [
+        "cold-emailing"
+      ],
+      "query": "Write a cold email to the CTO of a fintech startup. I don't have anything specific to say about them or about me, just make it sound impressive.",
+      "files": [],
+      "expected_behavior": [
+        "Does NOT invent an observation, a credential, a number, or a referral",
+        "Asks for one real observation about the reader and one real proof from the sender",
+        "Says that with neither, the fix is a different reader or more research, not better wording"
+      ]
+    },
+    {
+      "skills": [
+        "cold-emailing"
+      ],
+      "query": "Here is a list of 500 leads. Write personalized cold emails for all of them and set them up as a five-step sequence.",
+      "files": [],
+      "expected_behavior": [
+        "Says the practices are for one-to-one email written by hand, not sequences or blasts",
+        "Flags that bulk commercial email is regulated differently by country and should be checked first",
+        "Does NOT fabricate observations for hundreds of readers",
+        "Offers a workable alternative, such as a small researched batch and a single follow-up"
       ]
     },
     {
@@ -89,7 +115,7 @@
       "files": [],
       "expected_behavior": [
         "Writes a normal reply inside an existing conversation",
-        "Does NOT apply the cold email structure, the 100-word cap, or the reader research steps, since this is not cold outreach"
+        "Does NOT apply the cold email structure, the 100-word cap, or the reader research, since this is not cold outreach"
       ]
     }
   ]
