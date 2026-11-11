@@ -37,6 +37,7 @@ Or add as a Claude Code plugin (the repo ships a `.claude-plugin/plugin.json`).
 |-------|--------------|
 | [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | Writing that reads like a model wrote it: verbose, generic, em dashes, title-case headings, no stakes and no voice. Seven passes, plus exemplar writers to study and the research behind each tell. |
 | [lulu-comms](./skills/writing/lulu-comms/SKILL.md) | Lulu Cheng Meservey's comms operating system for copy, mission, branding, and PR: every tactic traces to a business objective, hook before story before channel, evidence over adjectives, plus launch/crisis/apology playbooks. |
+| [cold-emailing](./skills/writing/cold-emailing/SKILL.md) | Cold emails and DMs that get read, for a job search or a product. Picks the hiring manager over the recruiter, checks Gmail for what was already sent, writes about 90 words with one proof and one question, then drafts, verifies, sends only on say-so, and follows up once. Personal details stay in a gitignored profile. |
 
 ### Design
 
