@@ -1,7 +1,7 @@
 # tyler-skills
 
 Small agent skills that fix mistakes coding agents keep making: stale library APIs, AI-sounding
-copy, loading states that jump, ML gains that vanish on held-out data. Each one came from a
+copy, loading states that jump, papers you cite without checking. Each one came from a
 correction I had to make more than once in Claude Code.
 
 ```bash
@@ -17,9 +17,9 @@ it, then instructions the agent loads only when the task matches. Some skills sh
 reference files the agent reads as needed. They are plain Markdown, so they work with any agent
 that supports [Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview).
 
-You don't call most of them. Ask for cold-email copy and `cold-emailing` loads; ask for help
-with a training run and `wcml` loads. The two workflow skills are the exception: you invoke
-those by name.
+You don't call most of them. Ask for cold-email copy and `cold-emailing` loads; ask about
+prior work on a method and `scientific-literature-discovery` loads. The two workflow skills
+are the exception: you invoke those by name.
 
 ## The skills
 
@@ -40,7 +40,6 @@ those by name.
 | [researching-latent-demand](./skills/product/researching-latent-demand/SKILL.md) | Pick what to build from real user pain, then file it as issues. |
 | **Research** | |
 | [scientific-literature-discovery](./skills/research/scientific-literature-discovery/SKILL.md) | Map how papers connect, audit prior work and design tests that could prove you wrong. |
-| [wcml](./skills/research/wcml/SKILL.md) | Run ML experiments whose gains hold up on held-out data: a fast search mode and a careful bet mode. |
 | **Workflows** (invoke by name) | |
 | [orchestrating-subagents](./skills/workflows/orchestrating-subagents/SKILL.md) | Split a task and have subagents build the pieces in parallel. |
 | [shipping-pr-reviews](./skills/workflows/shipping-pr-reviews/SKILL.md) | Push to a PR, review the diff, verify each finding and fix the real ones. |
@@ -70,3 +69,4 @@ difference with and without it. Adapt anything here, or delete the skills you di
 ## License
 
 [MIT](LICENSE)
+
