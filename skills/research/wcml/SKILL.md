@@ -88,12 +88,17 @@ inference. With a big budget, split it into 2 to 4 independent arms from the bas
 fresh context and certify the best arm; identical pilot arms ended at +3.6, +6.9 and +8.1.
 
 **S2. The loop.**
-- One change per try, one seed, keep it if the score rises at all (a cheap one-seed screen with
-  an occasional confirm did as well). Don't re-confirm each idea on many seeds; that is what
-  starved the losing arms.
-- Big levers first: step the learning rate by 2x until it drops, then epochs, then
-  regularisation strength. All three winning pilot arms found the learning rate; the three
-  that never tried it gained nothing.
+- Order the idea queue before anything else; it matters more than the acceptance rule. Big
+  levers first: step the learning rate by 2x until it drops, then epochs, then regularisation
+  strength. In simulation, the same rule gained +8.9 with big levers first and +3.6 in random
+  order; all three winning pilot arms found the learning rate.
+- One change per try, one seed, keep it if the score rises at all. Don't re-confirm each idea
+  on many seeds; that is what starved the losing arms. In simulation this rule is never beaten
+  by more than 1 point while ideas outnumber runs, and leads by 1.5 to 8 points at 20 to 100
+  runs. Its cost is about a 1-in-8 chance the final pick is truly worse, which the lockbox
+  check catches.
+- Switch to 2 seeds and keep only clear gains when you have fewer ideas than runs (say 15 ideas
+  for 100 runs) or a very large budget; there, extra seeds help.
 - Read the train and validation curves to pick the next lever: still improving means train
   longer; validation rising while train falls means regularise. Score the best checkpoint.
 - After a structural change (architecture, loss, data pipeline), try 0.5x, 1x and 2x the
@@ -142,8 +147,8 @@ baseline is rerun, not recorded.
 
 ## 4. Certify once
 
-Pick the commit to freeze: re-score the last 3 or so kept candidates on dev with fresh seeds
-and freeze the earliest one the others don't clearly beat. Train the baseline and the pick on
+Freeze the best commit as it stands; re-scoring the last few kept commits before freezing cost
+about a point in simulation when its runs came from the budget. Train the baseline and the pick on
 all development data, score both on the lockbox with several seeds (8 in the pilots), paired
 on the same seeds and items, and run `scripts/paired_bootstrap.py`. Its `scores.csv` has one
 row per lockbox item: the item's group, then the baseline's and the pick's score on it,

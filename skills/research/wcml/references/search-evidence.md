@@ -84,3 +84,25 @@ Considered and left out: quasi-random or Bayesian search (needs many parallel tr
 playbook itself says tune only the learning rate under ~10 trials); tree or evolutionary search
 (marginal over greedy in AIRA); muP transfer (needs reparametrising the model); ensembles
 (unmeasured, and averaging arms gained nothing in the pilots).
+
+## Simulation of acceptance rules (added 2026-11-13)
+
+A seeded numpy model of a budgeted search: a queue of ideas with true effects (sparse, dense and
+harmful mixtures), seed noise, dev-vs-lockbox mismatch, additive gains, and a final lockbox
+certify. 900 cells, 10,000 searches each. Calibrated to the pilot (simulated dev +14.0 and lockbox
++8.9 vs the pilot's +13.4 and +9.3).
+
+- One seed, keep any gain is never beaten by more than 1 point while ideas outnumber runs; it
+  leads screen-and-confirm and k-seed rules by about 1.5 points at 20 runs and 5 to 8 at 100,
+  when seed noise is no bigger than a typical helpful effect. At 10 runs or fewer all rules tie.
+- Idea order moves gains more than the rule (+8.9 big levers first vs +3.6 random, same rule). A
+  4-idea arm loses badly only when its order is also poor.
+- Multi-seed rules win only with fewer ideas than runs (up to 2x the gain) or very large budgets.
+- Keep-any-gain has a 13% average chance of a truly negative pick (8 seeds: 2%); more seeds remove
+  only seed-noise inflation, and every rule loses most of its dev gain to dev-lockbox mismatch.
+- Freezing the earliest of the last 3 kept commits not clearly beaten changed true gain by −0.07
+  points when re-scoring was free and −0.91 when its runs came from the budget: not adopted.
+
+Assumptions that matter: a fixed idea queue (agents that adapt to noisy results are not modelled),
+additive gains (saturation halves the cells where keep-any-gain wins but reverses none), and a
+clear-gain bar set to one seed SD.
