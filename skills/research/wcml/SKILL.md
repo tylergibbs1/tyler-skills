@@ -73,10 +73,13 @@ externally managed Python, an empty git checkout) than to bad ideas.
 
 ## Search mode
 
-In two pilots on the same task (10 agent arms, each scored on a lockbox), the number of ideas
-tried decided the outcome. Arms that checked every idea on 8 seeds tried 4 to 6 ideas and
-mostly gained nothing; plain loops that kept any one-seed gain tried 14 to 47 and gained +3.6
-to +9.3. Evidence and sources: `references/search-evidence.md`.
+In two pilots on one task (10 agent arms, each scored on a lockbox), the arms that lost were
+the ones whose rules let them afford only 4 to 6 ideas (8 seeds per idea, or a budget eaten by
+confirmations): they gained +1.9 or nothing, while arms that tried 14 to 47 ideas gained +3.6 to
++9.3. The pilots do not show that keeping any gain beats a cheap screen: a one-seed screen with
+a single 8-seed confirm (+9.1) tied keep-any-gain (+9.3). Every winning arm also found the
+learning rate, so idea order matters as much as the rule. Treat this as one task's evidence.
+Details: `references/search-evidence.md`.
 
 **S1. Set up.** Commit every try; `git reset --hard` drops one. Log each run to `results.tsv`
 (commit, change, score, kept or dropped, GPU-seconds). Fix the per-run time limit and total
@@ -85,8 +88,9 @@ inference. With a big budget, split it into 2 to 4 independent arms from the bas
 fresh context and certify the best arm; identical pilot arms ended at +3.6, +6.9 and +8.1.
 
 **S2. The loop.**
-- One change per try, one seed, keep it if the score rises at all. Don't re-confirm each idea
-  on many seeds; that is what starved the losing arms.
+- One change per try, one seed, keep it if the score rises at all (a cheap one-seed screen with
+  an occasional confirm did as well). Don't re-confirm each idea on many seeds; that is what
+  starved the losing arms.
 - Big levers first: step the learning rate by 2x until it drops, then epochs, then
   regularisation strength. All three winning pilot arms found the learning rate; the three
   that never tried it gained nothing.

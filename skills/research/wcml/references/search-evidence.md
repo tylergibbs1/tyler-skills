@@ -25,6 +25,12 @@ training the baseline and the arm's best commit on all development data and scor
 | B | 8 seeds, keep clear gain | 6 | +7.4 | +7.6 [4.0, 12.4] |
 | D | 8 seeds batched, written contract, clear gain | 4 | +4.4 | +1.9 [0.6, 3.5] |
 
+Reading pilot 1: A, C and B overlap, so it does not separate keep-any-gain from screened
+acceptance. What it shows is that D, which afforded only 4 runs, lost. Idea order is confounded
+with the rule (every winner found the learning rate; no loser tried it). Prior work agrees the
+answer depends on the task: greedy loops rank first on tasks with many easy gains and last on
+sparse ones (FML-bench).
+
 ## Pilot 2: plain loop against a strict harness (1 GPU-hour per arm)
 
 | Arm | Rule | Runs | Dev best | Lockbox gain (95% CI) |
