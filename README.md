@@ -1,75 +1,71 @@
-# Skills
+# tyler-skills
 
-Agent skills I find useful for my workflow: practical patterns, each capturing a focused behavior you can reuse across projects.
-
-They are small, model-agnostic, and composable. Adapt them, delete the ones you disagree with, make them yours.
-
-## Quick start
-
-With [skills.sh](https://skills.sh):
+Small agent skills that fix mistakes coding agents keep making: stale library APIs, AI-sounding
+copy, loading states that jump, ML gains that vanish on held-out data. Each one came from a
+correction I had to make more than once in Claude Code.
 
 ```bash
 npx skills@latest add tylergibbs1/tyler-skills
 ```
 
-Or clone and symlink into `~/.claude/skills`:
+[Browse the skills](#the-skills) · [Other ways to install](#install) · [Add or improve a skill](#contributing)
 
-```bash
-git clone https://github.com/tylergibbs1/tyler-skills.git
-cd tyler-skills
-./scripts/link-skills.sh
-```
+## How it works
 
-Or add as a Claude Code plugin (the repo ships a `.claude-plugin/plugin.json`).
+A skill is a folder with a `SKILL.md`: a short description that tells the agent when to use
+it, then instructions the agent loads only when the task matches. Some skills ship scripts or
+reference files the agent reads as needed. They are plain Markdown, so they work with any agent
+that supports [Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview).
+
+You don't call most of them. Ask for cold-email copy and `cold-emailing` loads; ask for help
+with a training run and `wcml` loads. The two workflow skills are the exception: you invoke
+those by name.
 
 ## The skills
 
-### Engineering
+| Skill | Use it to |
+|-------|-----------|
+| **Engineering** | |
+| [grounding-with-context7](./skills/engineering/grounding-with-context7/SKILL.md) | Check library, framework and SDK calls against current docs instead of training data. |
+| [learning-from-exemplar-repos](./skills/engineering/learning-from-exemplar-repos/SKILL.md) | Copy patterns from a strong reference repo instead of inventing them. |
+| **Writing** | |
+| [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | Strip the tells that make text read as model-written, in seven passes. |
+| [lulu-comms](./skills/writing/lulu-comms/SKILL.md) | Write launch, PR and brand copy where every line serves a business goal. |
+| [cold-emailing](./skills/writing/cold-emailing/SKILL.md) | Write cold emails and DMs under 100 words that strangers answer. |
+| **Design** | |
+| [linear-design-principles](./skills/design/linear-design-principles/SKILL.md) | Make product and UI calls the way Linear does, and know where that stops applying. |
+| [mirroring-layout-in-loading-states](./skills/design/mirroring-layout-in-loading-states/SKILL.md) | Build loading states that match the real layout and never show "done" early. |
+| [creating-aws-architecture-diagrams](./skills/design/creating-aws-architecture-diagrams/SKILL.md) | Draw AWS diagrams with verified connections and named resources. |
+| **Product** | |
+| [researching-latent-demand](./skills/product/researching-latent-demand/SKILL.md) | Pick what to build from real user pain, then file it as issues. |
+| **Research** | |
+| [scientific-literature-discovery](./skills/research/scientific-literature-discovery/SKILL.md) | Map how papers connect, audit prior work and design tests that could prove you wrong. |
+| [wcml](./skills/research/wcml/SKILL.md) | Run ML experiments whose gains hold up on held-out data: a fast search mode and a careful bet mode. |
+| **Workflows** (invoke by name) | |
+| [orchestrating-subagents](./skills/workflows/orchestrating-subagents/SKILL.md) | Split a task and have subagents build the pieces in parallel. |
+| [shipping-pr-reviews](./skills/workflows/shipping-pr-reviews/SKILL.md) | Push to a PR, review the diff, verify each finding and fix the real ones. |
 
-| Skill | What it does |
-|-------|--------------|
-| [grounding-with-context7](./skills/engineering/grounding-with-context7/SKILL.md) | Ground work with a library, framework, or SDK in current docs via Context7 instead of stale training data. |
-| [learning-from-exemplar-repos](./skills/engineering/learning-from-exemplar-repos/SKILL.md) | Study a high-quality reference repo instead of inventing framework or style patterns from scratch. |
+Each skill's `SKILL.md` has the details. Test scenarios for skills that have them are in
+[`evals/`](./evals).
 
-### Writing
+## Install
 
-| Skill | What it does |
-|-------|--------------|
-| [human-sounding-copy](./skills/writing/human-sounding-copy/SKILL.md) | Writing that reads like a model wrote it: verbose, generic, em dashes, title-case headings, no stakes and no voice. Seven passes, plus exemplar writers to study and the research behind each tell. |
-| [lulu-comms](./skills/writing/lulu-comms/SKILL.md) | Lulu Cheng Meservey's comms operating system for copy, mission, branding, and PR: every tactic traces to a business objective, hook before story before channel, evidence over adjectives, plus launch/crisis/apology playbooks. |
-| [cold-emailing](./skills/writing/cold-emailing/SKILL.md) | Cold emails and DMs a stranger will read and answer. Write to the person who owns the problem, open on them, give one proof, ask one small question, and stay under 100 words in the sender's own voice. Also covers sending safely, the one follow-up, where the practices stop working, and where they came from. |
+With [skills.sh](https://skills.sh), as above, or clone and link into `~/.claude/skills`:
 
-### Design
+```bash
+git clone https://github.com/tylergibbs1/tyler-skills.git
+cd tyler-skills && ./scripts/link-skills.sh
+```
 
-| Skill | What it does |
-|-------|--------------|
-| [linear-design-principles](./skills/design/linear-design-principles/SKILL.md) | Apply Linear's UI/UX and product philosophy as product judgment, not decoration. Peer-aware about where those opinions have limits. |
-| [mirroring-layout-in-loading-states](./skills/design/mirroring-layout-in-loading-states/SKILL.md) | Make loading states match the real layout (no perceived shift) and keep progress UI from showing "done" or stale data while work is still running. |
-| [creating-aws-architecture-diagrams](./skills/design/creating-aws-architecture-diagrams/SKILL.md) | Create precise AWS architecture diagrams with verified relationships, named resources, focused perspectives, and polished 16:9 output. |
+The repo is also a Claude Code plugin (`.claude-plugin/plugin.json`). `./scripts/list-skills.sh`
+lists what's installed.
 
-### Product
+## Contributing
 
-Skills for deciding what to build and in what order.
-
-| Skill | What it does |
-|-------|--------------|
-| [researching-latent-demand](./skills/product/researching-latent-demand/SKILL.md) | Decide what to build from real pain/market research and the painkiller-not-vitamin test, then file as issues. |
-
-### Research
-
-| Skill | What it does |
-|-------|--------------|
-| [scientific-literature-discovery](./skills/research/scientific-literature-discovery/SKILL.md) | Find evidence-linked connections between scientific papers, audit prior work, challenge competing explanations, and design falsifiable tests. |
-| [wcml](./skills/research/wcml/SKILL.md) | Run ML experiments so gains hold up on held-out data, in two modes. Search mode: a budgeted agent loop of many cheap one-seed tries, big levers first, then one paired lockbox check. Bet mode: error review by eye, ceilings before methods, one variable with a control and a pre-written kill line, and a ledger. Ships a paired group bootstrap and a contact-sheet script; test scenarios in `evals/wcml/`. |
-
-### Workflows
-
-User-invoked multi-agent orchestration (reach them by name).
-
-| Skill | What it does |
-|-------|--------------|
-| [orchestrating-subagents](./skills/workflows/orchestrating-subagents/SKILL.md) | Decompose a task and fan out subagents to implement each piece in parallel, each briefed and told to ground in Context7. |
-| [shipping-pr-reviews](./skills/workflows/shipping-pr-reviews/SKILL.md) | Push changes to a PR, then run a workflow that reviews the diff, verifies each finding, and fixes the confirmed ones. |
+Issues and PRs are welcome. A good skill fixes one mistake an agent makes repeatedly, says in
+its description exactly when to load, and keeps `SKILL.md` short, with detail in reference
+files. If you change how a skill behaves, add or update a scenario in `evals/` that shows the
+difference with and without it. Adapt anything here, or delete the skills you disagree with.
 
 ## License
 
