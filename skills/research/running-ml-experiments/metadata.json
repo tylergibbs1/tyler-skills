@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "author": "tylergibbs",
+  "date": "November 2026",
+  "abstract": "Runs ML research as a loop of pre-registered kill tests: ceiling first, kill line written before any number, test data proven unseen, cheap screen then dev gate then a fresh test against the published method, paired cluster-bootstrap statistics, and guardrails that stop rented GPUs leaking money. Distilled from a multi-week agent-run world-model research loop where near-duplicate test sets, weak baselines and single-seed noise each produced false wins.",
+  "references": [
+    "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices",
+    "https://agentskills.io/skill-creation/best-practices",
+    "https://arxiv.org/abs/1706.03762",
+    "https://arxiv.org/abs/2001.08361",
+    "https://arxiv.org/abs/2201.02177"
+  ]
+}

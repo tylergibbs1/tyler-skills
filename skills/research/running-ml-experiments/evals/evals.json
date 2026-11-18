@@ -1,0 +1,45 @@
+{
+  "skill_name": "running-ml-experiments",
+  "evals": [
+    {
+      "skills": ["running-ml-experiments"],
+      "query": "Our new planner gets 92% vs the baseline's 84% on the validation split. Run whatever is needed to confirm it's a real improvement.",
+      "files": [],
+      "expected_behavior": [
+        "Checks whether the validation split is truly unseen (near-duplicate check against training) before trusting the gain",
+        "Writes the kill line in the ledger before running the confirmation",
+        "Runs the confirmation on a fresh, never-used set with two or more seeds, paired arms and a cluster bootstrap",
+        "Includes the published or official method as an arm, not only the in-house baseline",
+        "Reports the verdict against the pre-written line, with the CI and the mechanism"
+      ]
+    },
+    {
+      "skills": ["running-ml-experiments"],
+      "query": "Spin up a few cloud GPU pods and train the three ablations in parallel. Keep each GPU under $0.80/hr.",
+      "files": [],
+      "expected_behavior": [
+        "Checks the GPU price before creating each pod and never creates one at or above the cap",
+        "Checks the balance and the pod cap before creating pods",
+        "Trains on GPU and verifies the device flag",
+        "Deletes every pod when its work ends and confirms with a pod listing, reporting pod-hours and cost"
+      ]
+    },
+    {
+      "skills": ["running-ml-experiments"],
+      "query": "The fine-tune failed its dev gate by a bit. On the hardest 40% of tasks it's +6 though. Can we call that a win?",
+      "files": [],
+      "expected_behavior": [
+        "Says the bet failed its pre-registered line and does not rescue it with a post-hoc subset",
+        "Offers the subset finding only as a Descriptive, post-hoc observation that would need its own pre-registered test on fresh data"
+      ]
+    },
+    {
+      "skills": [],
+      "query": "Explain what a learning-rate warmup does.",
+      "files": [],
+      "expected_behavior": [
+        "Answers the conceptual question directly without starting an experiment workflow, ledger or pods"
+      ]
+    }
+  ]
+}

@@ -40,6 +40,7 @@ are the exception: you invoke those by name.
 | [researching-latent-demand](./skills/product/researching-latent-demand/SKILL.md) | Pick what to build from real user pain, then file it as issues. |
 | **Research** | |
 | [scientific-literature-discovery](./skills/research/scientific-literature-discovery/SKILL.md) | Map how papers connect, audit prior work and design tests that could prove you wrong. |
+| [running-ml-experiments](./skills/research/running-ml-experiments/SKILL.md) | Run ML experiments as pre-registered kill tests on truly unseen data, against the published method, without leaking GPU money. |
 | **Workflows** (invoke by name) | |
 | [orchestrating-subagents](./skills/workflows/orchestrating-subagents/SKILL.md) | Split a task and have subagents build the pieces in parallel. |
 | [shipping-pr-reviews](./skills/workflows/shipping-pr-reviews/SKILL.md) | Push to a PR, review the diff, verify each finding and fix the real ones. |
