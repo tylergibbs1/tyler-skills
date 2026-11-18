@@ -43,6 +43,18 @@ and baselines that are weaker than the published method. This skill closes each 
 - **Single-seed sweeps on ~150 items swing by about ±8 points.** Use two or more seeds,
   pair the arms on identical items, and cluster the bootstrap by the unit that
   repeats (task, source demo, user), never by row.
+- **Loose success rules hide the real ranking.** "On target at any step within the budget"
+  rewards pushing an object through the goal; a +26 win became −26 when the object had to
+  end on target, and a published method went from 74% to 6%. Report end-state success, a
+  shorter time budget and serial (one-episode) latency next to the official rule, and give
+  every arm the same stopping behaviour before crediting a gain to the model.
+- **Average-error screens kill real gains.** A bet with +23 strict was killed by a
+  one-step-error screen. Screen on decisions instead: model-vs-simulator agreement on the
+  planner's own picked plans. Advance when its lower bound is above 0, kill only when its
+  upper bound is at or below 0, otherwise run the full gate.
+- **A rented GPU at 0% is a planning bug.** Check `nvidia-smi` and the CPU quota once jobs
+  start; batch model inference on the GPU across candidates and episodes, and shard
+  simulation across every core.
 - **Read the mechanism, not only the score.** When a run passes or fails, find the
   measured reason (an oracle swap, a probe, a failure-type count). A pass with no
   mechanism is a candidate for the next leak.
